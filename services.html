@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ריינו סוככים - שירותים</title>
+
+    <!-- Fonts (same as homepage) -->
+    <link crossorigin href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans+Hebrew:wght@400;500;700;900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind (same as homepage) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0a2143",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111821",
+            },
+            fontFamily: {
+              display: ["Manrope", "Noto Sans Hebrew", "sans-serif"],
+              body: ["Noto Sans Hebrew", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Noto Sans Hebrew", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Manrope", "Noto Sans Hebrew", sans-serif;
+      }
+      .group:hover .group-hover\:block {
+        display: block;
+      }
+      .group:hover .group-hover\:opacity-100 {
+        opacity: 1;
+      }
+      .group:hover .group-hover\:translate-y-0 {
+        transform: translateY(0);
+      }
+    </style>
+    <link href="./Assets/Logo - RHINO .png" rel="icon" type="image/x-icon" />
+  </head>
+
+  <body
+    class="bg-background-light dark:bg-background-dark font-body text-gray-800 dark:text-gray-200"
+  >
+    <div class="flex flex-col min-h-screen">
+      <!-- ===== Header (identical to homepage) ===== -->
+      <header class="sticky top-0 z-50 bg-[#0a2143] backdrop-blur-0">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="flex items-center justify-between h-20 border-b border-white/10"
+          >
+            <!-- Logo -->
+            <div class="flex items-center gap-4">
+              <div
+                class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shrink-0"
+              >
+                <a href="./homepgae.html">
+                  <img
+                    class="max-h-12 sm:max-h-14 w-auto"
+                    src="./Assets/Logo - RHINO .png"
+                    alt="Logo"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Desktop nav -->
+            <nav
+              class="hidden lg:flex items-center gap-x-8 text-base font-medium"
+            >
+              <a
+                class="text-white hover:text-[#92a5af] transition-colors"
+                href="./homepgae.html"
+                >דף הבית</a
+              >
+
+              <div class="relative group">
+                <!-- Trigger -->
+                <a
+                  href="./services.html"
+                  class="text-white hover:text-[#92a5af] transition-colors flex items-center gap-1"
+                >
+                  <span>שירותים</span>
+                  <svg
+                    class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 9l-7 7-7-7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    ></path>
+                  </svg>
+                </a>
+
+                <!-- Dropdown -->
+                <div
+                  class="absolute right-0 top-full bg-white shadow-lg rounded-lg py-2 w-48 invisible opacity-0 translate-y-2 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0"
+                >
+                  <a
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
+                    href="#"
+                    >סוככים</a
+                  >
+                  <a
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
+                    href="#"
+                    >פרגולות</a
+                  >
+                  <a
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
+                    href="./first-service.html"
+                    >גדרות אלומיניום</a
+                  >
+                  <a
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
+                    href="#"
+                    >סגירות מרפסת</a
+                  >
+                </div>
+              </div>
+
+              <a
+                class="text-white hover:text-[#92a5af] transition-colors"
+                href="#"
+                >פרויקטים</a
+              >
+              <a
+                class="text-white hover:text-[#92a5af] transition-colors"
+                href="#"
+                >אודות</a
+              >
+            </nav>
+
+            <!-- Desktop actions (desktop only) -->
+            <div class="hidden lg:flex items-center gap-x-4">
+              <button
+                class="px-5 py-3 rounded-lg bg-[#92a5af] text-white text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black"
+              >
+                יצירת קשר
+              </button>
+              <a
+                href="https://wa.me/972501234567"
+                class="p-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
+                aria-label="WhatsApp"
+              >
+                <svg
+                  class="feather feather-message-square"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Hamburger (mobile/tablet only) -->
+            <button
+              id="mobileBtn"
+              class="lg:hidden inline-flex items-center justify-center p-3 rounded-lg border border-white/20 text-white"
+              aria-label="תפריט"
+            >
+              <svg
+                id="mobileIconOpen"
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <svg
+                id="mobileIconClose"
+                class="h-6 w-6 hidden"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Mobile nav panel -->
+          <div
+            id="mobilePanel"
+            class="lg:hidden hidden border-b border-white/10 bg-[#0a2143]"
+          >
+            <div class="px-4 sm:px-6 lg:px-8 py-4 space-y-4">
+              <a
+                class="block text-white hover:text-[#92a5af] transition-colors"
+                href="./homepgae.html"
+                >דף הבית</a
+              >
+              <details class="block">
+                <summary
+                  class="cursor-pointer text-white hover:text-[#92a5af] transition-colors"
+                >
+                  שירותים
+                </summary>
+                <div class="mt-2 ps-4 space-y-2">
+                  <a
+                    class="block text-white/90 hover:text-[#92a5af] transition-colors"
+                    href="#"
+                    >סוככים</a
+                  >
+                  <a
+                    class="block text-white/90 hover:text-[#92a5af] transition-colors"
+                    href="#"
+                    >פרגולות</a
+                  >
+                  <a
+                    class="block text-white/90 hover:text-[#92a5af] transition-colors"
+                    href="./first-service.html"
+                    >גדרות אלומיניום</a
+                  >
+                  <a
+                    class="block text-white/90 hover:text-[#92a5af] transition-colors"
+                    href="#"
+                    >סגירות מרפסת</a
+                  >
+                </div>
+              </details>
+              <a
+                class="block text-white hover:text-[#92a5af] transition-colors"
+                href="#"
+                >פרויקטים</a
+              >
+              <a
+                class="block text-white hover:text-[#92a5af] transition-colors"
+                href="./about-us.html"
+                >אודות</a
+              >
+
+              <div class="pt-2 flex gap-2">
+                <button
+                  class="flex-1 px-5 py-3 rounded-lg bg-[#92a5af] text-[#0a2143] text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black"
+                >
+                  יצירת קשר
+                </button>
+                <a
+                  href="https://wa.me/972501234567"
+                  class="p-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
+                  aria-label="WhatsApp"
+                >
+                  <svg
+                    class="feather feather-message-square"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ===== Main (services) ===== -->
+      <main
+        class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24"
+      >
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">
+              השירותים שלנו
+            </h2>
+            <p
+              class="text-lg text-gray-800/80 dark:text-gray-100/80 max-w-3xl mx-auto"
+            >
+              אנו מתמחים במתן פתרונות הצללה וגידור מתקדמים מאלומיניום וזכוכית,
+              בעיצוב מודרני ובאיכות ללא פשרות.
+            </p>
+          </div>
+
+          <!-- filters (added data-filter) // FILTERING -->
+          <div class="flex justify-center gap-3 sm:gap-4 mb-12 flex-wrap">
+            <button
+              data-filter="הכל"
+              class="px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 bg-primary text-white shadow"
+            >
+              הכל
+            </button>
+            <button
+              data-filter="אלומיניום"
+              class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 bg-white text-gray-800 hover:bg-gray-100 shadow"
+            >
+              אלומיניום
+            </button>
+            <button
+              data-filter="זכוכית"
+              class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 bg-white text-gray-800 hover:bg-gray-100 shadow"
+            >
+              זכוכית
+            </button>
+            <button
+              data-filter="סגירות"
+              class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 bg-white text-gray-800 hover:bg-gray-100 shadow"
+            >
+              סגירות
+            </button>
+          </div>
+
+          <!-- cards (added data-category per card) // FILTERING -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          >
+            <!-- Card 1 -->
+            <div
+              data-category="אלומיניום"
+              class="bg-white rounded-2xl shadow overflow-hidden transform hover:-translate-y-1.5 transition-transform duration-300 ease-in-out group"
+            >
+              <div class="relative">
+                <img
+                  alt="סוככות אלומיניום"
+                  class="w-full h-48 object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy36-rKr4_ECYA01wW85cA2oZ-Gcssa0D7cdwpE1Kizwb-BY0M_WoZ0twDROe90-2SsydTpYkIciInNdHDfFllwbXKH9n5uQoFkzZdIHOGrTiwfcA5k8W-hTDE_iuqz2b-t1uq5iHbvTZrIAbmNj0-5804uJVEq_HubLLhM6pIQ1-QWxICr_gOswB6BEsaQ7gILm2u9JXlSP6GkLtK-c0DioF3sZ8lPZZbeT49mSYFniu0OkE5nZjGq3jz_ds8qdcWXbv_Qicogait"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full"
+                >
+                  אלומיניום
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-primary">
+                  סוככות אלומיניום
+                </h3>
+                <p
+                  class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed h-12 mb-4"
+                >
+                  פתרונות הצללה מתקדמים מאלומיניום, עמידים ובעיצוב מודרני שמשדרג
+                  כל חלל חיצוני.
+                </p>
+                <a
+                  class="inline-block bg-primary text-white text-sm font-bold py-2 px-6 rounded-lg hover:bg-primary/90 transition-colors"
+                  href="#"
+                  >לפרטים</a
+                >
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              data-category="אלומיניום"
+              class="bg-white rounded-2xl shadow overflow-hidden transform hover:-translate-y-1.5 transition-transform duration-300 ease-in-out group"
+            >
+              <div class="relative">
+                <img
+                  alt="גדרות אלומיניום"
+                  class="w-full h-48 object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOB48_NRl220aWF_EiMbc0U0wd6egSwyxddZg5hL5qei2B4SQdTAhR0ktBVYAlqt7DACd39pjytbLVl6V9PyxuGpKekCXdtEO7bmMtk9xpARTaWm0cLxL_IqNa_HVIbUhkmIvUI1B9R6UV2R3wQbDTT5XI-ky0TSqQZzb9La-tKZnM25IZ4Em4SBVO3SVbWxGZSwKd9c-dk3haRBKBRFq_pRBGwJE58zLkhoHP-5M6hCXS88CldWOqc_FqAzxUon4rNS5E8bEqh26q"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full"
+                >
+                  אלומיניום
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-primary">
+                  גדרות אלומיניום
+                </h3>
+                <p
+                  class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed h-12 mb-4"
+                >
+                  גדרות אלומיניום מעוצבות המשלבות פרטיות, ביטחון וסגנון עכשווי
+                  לחצר הבית.
+                </p>
+                <a
+                  class="inline-block bg-primary text-white text-sm font-bold py-2 px-6 rounded-lg hover:bg-primary/90 transition-colors"
+                  href="./first-service.html"
+                  >לפרטים</a
+                >
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              data-category="זכוכית"
+              class="bg-white rounded-2xl shadow overflow-hidden transform hover:-translate-y-1.5 transition-transform duration-300 ease-in-out group"
+            >
+              <div class="relative">
+                <img
+                  alt="מערכות זכוכית"
+                  class="w-full h-48 object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrbnzMxmLcsN0YYBDPAFvogjzg2eKFKzgJ7RNgnmvS29Oz3r6DEZ6WhHwzGcARL3ZMT_Rzlm6ogk-kLXG1BgxAiHncNuE8MVpoDiPHyxuA43--Vxsb60NGxRmnv5cI75WoGeFTNBa4Brn50VBDy6mPKe_SV-aXOaX4ENIR2VrxZAG95bGLoECiT7HcfpmOq04flCr5tP3MDxcDDtDkaQ7QkQOiFTBmO4RdxhMfnGbFSlJPO0HCyuAGIl8ZbOhhWodOUSAGccBGp3cK"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full"
+                >
+                  זכוכית
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-primary">
+                  מערכות זכוכית
+                </h3>
+                <p
+                  class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed h-12 mb-4"
+                >
+                  מעקות ומחיצות זכוכית אלגנטיים למרפסות, בריכות ומדרגות,
+                  המעניקים מראה נקי ויוקרתי.
+                </p>
+                <a
+                  class="inline-block bg-primary text-white text-sm font-bold py-2 px-6 rounded-lg hover:bg-primary/90 transition-colors"
+                  href="#"
+                  >לפרטים</a
+                >
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              data-category="סגירות"
+              class="bg-white rounded-2xl shadow overflow-hidden transform hover:-translate-y-1.5 transition-transform duration-300 ease-in-out group"
+            >
+              <div class="relative">
+                <img
+                  alt="סגירות מרפסת"
+                  class="w-full h-48 object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXywACb6LIspoplerVsopyOuCEoxrmA3ZSaVEH-EkqeDz7LkXGO7ilGUPCwDjQBpZkbuzCVI8_1llcbWLfs8N-eyK9qr2g0eLNO1YzoMJnQIccbQrzKeAhEN6BUmVZpfDIJgw3-LFvWXz3pm2H4x4hOneqHpW3FOUXKw8206rdqF_UIob7v2V-MqRk1rEst4aUQrxbZgSg8HbS7DjFRkglVkc6ezaK2hyebkqRgRwZ-OYpUzJDOnw4ciIG46xA_6Jh7_Zlty-S3jlK"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full"
+                >
+                  סגירות
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-primary">
+                  סגירות מרפסת
+                </h3>
+                <p
+                  class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed h-12 mb-4"
+                >
+                  הפכו את המרפסת לחדר נוסף בבית באמצעות סגירות זכוכית מתקפלות או
+                  קבועות.
+                </p>
+                <a
+                  class="inline-block bg-primary text-white text-sm font-bold py-2 px-6 rounded-lg hover:bg-primary/90 transition-colors"
+                  href="#"
+                  >לפרטים</a
+                >
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div
+              data-category="סגירות"
+              class="bg-white rounded-2xl shadow overflow-hidden transform hover:-translate-y-1.5 transition-transform duration-300 ease-in-out group"
+            >
+              <div class="relative">
+                <img
+                  alt="סגירות חורף"
+                  class="w-full h-48 object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG7_2YmKcThrl6hWmhkfY5vcpY6cvjl3NBwZB47wjV15wg9KPvJxjQ8dLqvOmrQd53DfOBeWC_IXgj1KfJ-L0eC_HTFT-XumCxgGApfBFaTQsu2aM8uxxKOl_jLXQyRP2u-4nhPzVCtrepfbFiuRL9GnJ1DWfB_BpvRNJLCTHAaiMVyYoFhNdJckjxRNZaqdwC-yno5g4hFw4JWp-ChjevOAuamZaVhqLnIbZW-1jOjHyjF9je4ZddXrzs65YrxZC3eDx0SJGiNaEE"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full"
+                >
+                  סגירות
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-primary">סגירות חורף</h3>
+                <p
+                  class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed h-12 mb-4"
+                >
+                  פתרונות אטימה מתקדמים המאפשרים ליהנות מהמרפסת או הפרגולה בכל
+                  ימות השנה.
+                </p>
+                <a
+                  class="inline-block bg-primary text-white text-sm font-bold py-2 px-6 rounded-lg hover:bg-primary/90 transition-colors"
+                  href="#"
+                  >לפרטים</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- ===== Footer (identical to homepage) ===== -->
+      <footer class="bg-primary text-white mt-auto">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    ></path>
+                  </svg>
+                </div>
+                <h2 class="text-xl font-bold">ריינו סוככים</h2>
+              </div>
+              <p class="text-gray-300">
+                פתרונות הצללה מתקדמים לבית ולעסק. אנו מתמחים בסוככים, פרגולות,
+                סגירות חורף וגדרות אלומיניום בהתאמה אישית.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold">קישורים מהירים</h3>
+              <ul class="mt-4 space-y-2">
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="./about-us.html"
+                    >אודות</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="./services.html"
+                    >שירותים</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="#"
+                    >פרויקטים</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="#"
+                    >יצירת קשר</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold">שירותים</h3>
+              <ul class="mt-4 space-y-2">
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="#"
+                    >סוככים</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="#"
+                    >פרגולות אלומיניום</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="#"
+                    >סגירות חורף</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="./first-service.html"
+                    >גדרות אלומיניום</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold">יצירת קשר</h3>
+              <ul class="mt-4 space-y-2 text-gray-300">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="feather feather-map-pin"
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                  >
+                    <path
+                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                    ></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>העבודה 15, תל אביב</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="feather feather-phone"
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    ></path>
+                  </svg>
+                  <span>050-1234567</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="feather feather-mail"
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>contact@shadesolutions.co.il</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="mt-16 pt-8 border-t border-white/20 text-center text-gray-400 text-sm"
+          >
+            <p>© 2024 ריינו סוככים. כל הזכויות שמורות.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Mobile menu toggle (same as homepage) -->
+    <script>
+      const btn = document.getElementById("mobileBtn");
+      const panel = document.getElementById("mobilePanel");
+      const icOpen = document.getElementById("mobileIconOpen");
+      const icClose = document.getElementById("mobileIconClose");
+      btn?.addEventListener("click", () => {
+        panel.classList.toggle("hidden");
+        icOpen.classList.toggle("hidden");
+        icClose.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Simple filtering logic // FILTERING -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = Array.from(document.querySelectorAll("[data-filter]"));
+        const cards = Array.from(document.querySelectorAll("[data-category]"));
+
+        // Match your existing visual styles:
+        const ACTIVE_ON = ["bg-primary", "text-white", "font-bold"];
+        const ACTIVE_OFF = ["bg-white", "text-gray-800", "font-semibold"];
+
+        function setActiveButton(btn) {
+          buttons.forEach((b) => {
+            b.classList.remove(...ACTIVE_ON);
+            ACTIVE_OFF.forEach((c) => {
+              if (!b.classList.contains(c)) b.classList.add(c);
+            });
+          });
+          btn.classList.remove(...ACTIVE_OFF);
+          btn.classList.add(...ACTIVE_ON);
+        }
+
+        function applyFilter(filter) {
+          cards.forEach((card) => {
+            const list = card.dataset.category.split(",").map((s) => s.trim());
+            const show = filter === "הכל" || list.includes(filter);
+            card.classList.toggle("hidden", !show);
+          });
+        }
+
+        // Init — default to "הכל"
+        const defaultBtn =
+          buttons.find((b) => b.dataset.filter === "הכל") || buttons[0];
+        if (defaultBtn) {
+          setActiveButton(defaultBtn);
+          applyFilter(defaultBtn.dataset.filter);
+        }
+
+        // Click handlers
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            setActiveButton(btn);
+            applyFilter(btn.dataset.filter);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
