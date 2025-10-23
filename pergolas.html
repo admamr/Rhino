@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>פרגולות – ריינו סוככים</title>
+    <link href="./Assets/Logo - RHINO .png" rel="icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0a2143",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111821",
+              accent: "#92a5af",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+              body: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      [x-cloak] {
+        display: none !important;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200"
+  >
+    <div class="flex flex-col min-h-screen">
+      <!-- ===== HEADER (same as site) ===== -->
+      <header class="sticky top-0 z-50 bg-[#0a2143] backdrop-blur-0">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="flex items-center justify-between h-20 border-b border-white/10"
+          >
+            <!-- Logo -->
+            <div class="flex items-center gap-4">
+              <div
+                class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shrink-0"
+              >
+                <a href="./index.html">
+                  <img
+                    class="max-h-12 sm:max-h-14 w-auto"
+                    src="./Assets/Logo - RHINO .png"
+                    alt="Logo"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Desktop nav -->
+            <nav
+              class="hidden lg:flex items-center gap-x-8 text-base font-medium"
+            >
+              <a
+                class="text-white hover:text-[#92a5af] transition-colors"
+                href="./index.html"
+                >דף הבית</a
+              >
+
+              <div class="relative group">
+                <a
+                  href="./services.html"
+                  class="text-white hover:text-[#92a5af] transition-colors flex items-center gap-1"
+                >
+                  <span>שירותים</span>
+                  <svg
+                    class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 9l-7 7-7-7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    ></path>
+                  </svg>
+                </a>
+                <div
+                  class="absolute right-0 top-full bg-white shadow-lg rounded-lg py-2 w-48 invisible opacity-0 translate-y-2 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0"
+                >
+                  <a
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
+                    href="#"
+                    >סוככים</a
+                  >
+                  <a
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
+                    href="./pergolas.html"
+                    >פרגולות</a
+                  >
+                  <a
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
+                    href="./fences.html"
+                    >גדרות אלומיניום</a
+                  >
+                  <a
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
+                    href="./enclosures.html"
+                    >סגירות מרפסת</a
+                  >
+                </div>
+              </div>
+
+              <a
+                class="text-white hover:text-[#92a5af] transition-colors"
+                href="./projects.html"
+                >פרויקטים</a
+              >
+              <a
+                class="text-white hover:text-[#92a5af] transition-colors"
+                href="./about-us.html"
+                >אודות</a
+              >
+            </nav>
+
+            <!-- Desktop actions -->
+            <div class="hidden lg:flex items-center gap-x-4">
+              <button
+                class="px-5 py-3 rounded-lg bg-[#92a5af] text-white text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black"
+              >
+                יצירת קשר
+              </button>
+              <a
+                href="https://wa.me/972501234567"
+                class="p-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
+                aria-label="WhatsApp"
+              >
+                <svg
+                  class="feather feather-message-square"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Hamburger -->
+            <button
+              id="mobileBtn"
+              class="lg:hidden inline-flex items-center justify-center p-3 rounded-lg border border-white/20 text-white"
+              aria-label="תפריט"
+              aria-controls="mobilePanel"
+              aria-expanded="false"
+            >
+              <svg
+                id="mobileIconOpen"
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <svg
+                id="mobileIconClose"
+                class="h-6 w-6 hidden"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Mobile nav panel -->
+          <div
+            id="mobilePanel"
+            class="lg:hidden hidden border-b border-white/10 bg-[#0a2143]"
+          >
+            <div class="px-4 sm:px-6 lg:px-8 py-4 space-y-4">
+              <a
+                class="block text-white hover:text-[#92a5af] transition-colors"
+                href="./index.html"
+                >דף הבית</a
+              >
+              <details class="block">
+                <summary
+                  class="cursor-pointer text-white hover:text-[#92a5af] transition-colors"
+                >
+                  שירותים
+                </summary>
+                <div class="mt-2 ps-4 space-y-2">
+                  <a
+                    class="block text-white/90 hover:text-[#92a5af] transition-colors"
+                    href="#"
+                    >סוככים</a
+                  >
+                  <a
+                    class="block text-white/90 hover:text-[#92a5af] transition-colors"
+                    href="./pergolas.html"
+                    >פרגולות</a
+                  >
+                  <a
+                    class="block text-white/90 hover:text-[#92a5af] transition-colors"
+                    href="./fences.html"
+                    >גדרות אלומיניום</a
+                  >
+                  <a
+                    class="block text-white/90 hover:text-[#92a5af] transition-colors"
+                    href="./enclosures.html"
+                    >סגירות מרפסת</a
+                  >
+                </div>
+              </details>
+              <a
+                class="block text-white hover:text-[#92a5af] transition-colors"
+                href="./projects.html"
+                >פרויקטים</a
+              >
+              <a
+                class="block text-white hover:text-[#92a5af] transition-colors"
+                href="./about-us.html"
+                >אודות</a
+              >
+
+              <div class="pt-2 flex gap-2">
+                <button
+                  class="flex-1 px-5 py-3 rounded-lg bg-[#92a5af] text-[#0a2143] text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black"
+                >
+                  יצירת קשר
+                </button>
+                <a
+                  href="https://wa.me/972501234567"
+                  class="p-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
+                  aria-label="WhatsApp"
+                >
+                  <svg
+                    class="feather feather-message-square"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ===== MAIN ===== -->
+      <main
+        class="flex-grow container mx-auto px-6 py-16 md:py-24"
+        x-data="{ activeTab: 'electric' }"
+        x-cloak
+      >
+        <div class="max-w-7xl mx-auto">
+          <!-- Page title -->
+          <div class="flex flex-col items-start gap-4 mb-10">
+            <h1
+              class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
+            >
+              פרגולות
+            </h1>
+            <p class="text-gray-600 dark:text-gray-400 md:max-w-2xl">
+              מומחיות בפרגולות אלומיניום מעוצבות, עמידות ופונקציונליות—בהתאמה
+              אישית מלאה לצרכים שלכם.
+            </p>
+          </div>
+
+          <!-- Tabs -->
+          <div
+            class="border-b border-gray-200 dark:border-gray-700 flex flex-wrap gap-6"
+          >
+            <button
+              class="pb-3 -mb-[1px] border-b-2"
+              :class="activeTab==='electric' ? 'border-[#0a2143] text-[#0a2143] dark:text-white' : 'border-transparent text-gray-500 hover:text-gray-800'"
+              @click="activeTab='electric'"
+            >
+              פרגולה חשמלית
+            </button>
+            <button
+              class="pb-3 -mb-[1px] border-b-2"
+              :class="activeTab==='hightech' ? 'border-[#0a2143] text-[#0a2143] dark:text-white' : 'border-transparent text-gray-500 hover:text-gray-800'"
+              @click="activeTab='hightech'"
+            >
+              פרגולה קבועה "הייטיק"
+            </button>
+            <button
+              class="pb-3 -mb-[1px] border-b-2"
+              :class="activeTab==='standard' ? 'border-[#0a2143] text-[#0a2143] dark:text-white' : 'border-transparent text-gray-500 hover:text-gray-800'"
+              @click="activeTab='standard'"
+            >
+              פרגולה סטנדרטית
+            </button>
+            <button
+              class="pb-3 -mb-[1px] border-b-2"
+              :class="activeTab==='glass' ? 'border-[#0a2143] text-[#0a2143] dark:text-white' : 'border-transparent text-gray-500 hover:text-gray-800'"
+              @click="activeTab='glass'"
+            >
+              פרגולות זכוכית
+            </button>
+          </div>
+
+          <!-- Tab: Electric -->
+          <section class="pt-8" x-show="activeTab==='electric'">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <div>
+                <h2
+                  class="text-2xl font-bold text-gray-900 dark:text-white mb-3"
+                >
+                  פרגולה חשמלית – רפרפות נפתחות מאלומיניום
+                </h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-6">
+                  פתרון חכם לשליטה באור ובצל עם עיצוב מודרני. פתיחה/סגירה
+                  בלחיצה, תאורת LED ומרזבים נסתרים.
+                </p>
+
+                <div class="space-y-6">
+                  <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm"
+                  >
+                    <h3
+                      class="text-lg font-bold text-[#0a2143] dark:text-white mb-3"
+                    >
+                      יתרונות
+                    </h3>
+                    <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span
+                        >שליטה נוחה בלחיצה.
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span
+                        >הגנה משמש וגשם (מרזבים נסתרים).
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span
+                        >מראה נקי ומודרני.
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span
+                        >צבע לבחירה ללא תוספת.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <details
+                    class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm"
+                  >
+                    <summary
+                      class="cursor-pointer font-bold text-[#0a2143] dark:text-white"
+                    >
+                      שאלות נפוצות
+                    </summary>
+                    <div
+                      class="mt-4 space-y-3 text-gray-700 dark:text-gray-300"
+                    >
+                      <div>
+                        <h4 class="font-semibold">האם נכנסים מים?</h4>
+                        <p class="text-sm">
+                          לא—יש מרזבים נסתרים שמנקזים את המים.
+                        </p>
+                      </div>
+                      <div
+                        class="pt-3 border-t border-gray-200 dark:border-gray-700"
+                      >
+                        <h4 class="font-semibold">מה קורה בהפסקת חשמל?</h4>
+                        <p class="text-sm">ניתן לשלב גיבוי ידני/סוללת גיבוי.</p>
+                      </div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <!-- images -->
+              <div class="grid grid-cols-2 gap-4">
+                <img
+                  class="rounded-lg shadow-lg w-full h-64 object-cover col-span-2"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWHFY-YZY_9cxDG-8Zw-islkjEX9mzF40YfMPKiC_H-6wxyanY68ld4gZrKjXh1pLDHjL0tsWDJy6AIvWLVPrT_SDSHxLhueyD2Qmp1Te130M4rJie3qBAj4-hYzkMMHsyIIbyjtMry7_zVWIiwV_YS1XfmuNEkCbxMqqER_EubH7OURr7tKeHlf17FYiqssWYPA_eUGoKDXudIfOfRH12mvcHRe8H0SNcpS7gb0gM5QrnZxWLcsYpyggOmXADsKq5x5T_nwntMXXN"
+                  alt=""
+                />
+                <img
+                  class="rounded-lg shadow-lg w-full h-40 object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJTsriqD38fkVCN3icPI2xol3irAFKB5A2kBqP78vYPGNv5-7G7zmng7KJBrXJ9S530YY7KXTvecQD5UwYC2Uyk1Ys0nxQ7cfdkABkvIWf5HZQOKIlKQYEd1riNQYqlUy2OFbcJmjU0YM8xMipdEau_hLGJZWXbx44aUK9-wE8JG-MkEcOpeYzbPSNQCbPsKiyxmpaCp6xOI_6fdw9qc5wpPjLkRH3g4pk_YyTBuzqJPHLU0qSHQNvXbLg-WXmkkTAABDay1uUPjLp"
+                  alt=""
+                />
+                <img
+                  class="rounded-lg shadow-lg w-full h-40 object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK0eOH4_HHx-OKfME2SBOBqEtXK2VWWj53M5pQMLJKMOJbkcUXwpkMQaBTDPrMz-rFwtNtz5n5vI7a5OaFklBoT54vadyOFfuN6F6pstPM26ozLwzOqSaFbu0ZvzCHSZwxN8RYgceAneGFAVn7ZM1ZrTqneLEexqS-KpMHUV_XFqpK8jRZXipAPaKdBWiwyx7yUoIjaopoL9aaOEHQI4qByIZ-XTT-Fh2WS47ppyh3LRQMuZQkz-xVGkkfFOV3yRBy8m9ceo6JJl1Q"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <!-- CTA band -->
+            <div
+              class="mt-10 bg-[#0a2143] text-white rounded-2xl shadow-lg px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+            >
+              <div class="max-w-2xl">
+                <h3 class="text-2xl md:text-3xl font-extrabold mb-2">
+                  מתאים לכם פרגולה חשמלית?
+                </h3>
+                <p class="text-white/90">
+                  נדאג לתכנון, ייצור והתקנה—בדיוק לפי הבית שלכם.
+                </p>
+              </div>
+
+              <div
+                class="flex flex-col lg:flex-row gap-3 lg:gap-4 w-full lg:w-auto"
+              >
+                <a
+                  href="#"
+                  class="w-full lg:w-auto sm:w-auto px-6 py-3 rounded-lg bg-[#92a5af] text-white text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black text-center"
+                >
+                  קבלו הצעת מחיר
+                </a>
+                <a
+                  href="./services.html"
+                  class="w-full lg:w-auto sm:w-auto px-6 py-3 rounded-lg bg-transparent border-2 border-white text-white text-base font-bold transition-colors hover:bg-white hover:text-[#0a2143] text-center"
+                >
+                  צפו בשירותים
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Tab: Hightech -->
+          <section class="pt-8" x-show="activeTab==='hightech'">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <div>
+                <h2
+                  class="text-primary dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5"
+                >
+                  פרגולה קבועה מאלומיניום דגם "הייטיק"
+                </h2>
+                <p
+                  class="text-text-primary dark:text-gray-300 text-base font-normal leading-normal pb-6 pt-1"
+                >
+                  פרגולת "הייטיק" מיועדת למי שמחפש עיצוב יוקרתי במיוחד לכניסה
+                  לבית. משלבת אלגנטיות מודרנית עם עמידות גבוהה בפני תנאי מזג
+                  האוויר בישראל, ומבטיחה הצללה מקסימלית ואסתטיקה מרהיבה.
+                </p>
+
+                <div class="space-y-6">
+                  <!-- יתרונות -->
+                  <div
+                    class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm"
+                  >
+                    <h3
+                      class="text-lg font-bold text-primary dark:text-accent mb-3"
+                    >
+                      יתרונות
+                    </h3>
+                    <ul class="space-y-2 text-text-primary dark:text-gray-300">
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        מראה יוקרתי במיוחד המתאים לכניסות ולחללים מעוצבים.
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        פרופילי הצללה בצפיפות גבוהה להצללה מירבית.
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        אפשרות לשילוב תאורת לד ופרופילים שקועים.
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        עמידה מלאה בתנאי מזג אוויר קשים – כולל מרזבים נסתרים.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- שאלות נפוצות -->
+                  <details
+                    class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm"
+                  >
+                    <summary
+                      class="cursor-pointer font-bold text-[#0a2143] dark:text-white"
+                    >
+                      שאלות נפוצות
+                    </summary>
+                    <div
+                      class="mt-4 space-y-3 text-gray-700 dark:text-gray-300"
+                    >
+                      <div>
+                        <h4 class="font-semibold">
+                          האם ניתן לבחור צבע בהתאמה אישית?
+                        </h4>
+                        <p class="text-sm">
+                          כן, ניתן להזמין את הפרגולה בכל צבע רצוי — כולל צבעים
+                          דמויי עץ — ללא תוספת תשלום.
+                        </p>
+                      </div>
+                      <div
+                        class="pt-3 border-t border-gray-200 dark:border-gray-700"
+                      >
+                        <h4 class="font-semibold">מה זמן האספקה?</h4>
+                        <p class="text-sm">
+                          זמן האספקה הוא עד 45 ימי עסקים מיום סגירת העסקה ותשלום
+                          מקדמה של 50%.
+                        </p>
+                      </div>
+                      <div
+                        class="pt-3 border-t border-gray-200 dark:border-gray-700"
+                      >
+                        <h4 class="font-semibold">מה כוללת האחריות?</h4>
+                        <p class="text-sm">
+                          אחריות של 10 שנים על הפרגולה ושנה אחת על האיטום — לפי
+                          התקן הישראלי.
+                        </p>
+                      </div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <!-- תמונות -->
+              <div class="mt-5">
+                <div class="grid grid-cols-2 gap-4">
+                  <img
+                    class="rounded-lg shadow-lg w-full h-64 object-cover col-span-2"
+                    src="https://images.unsplash.com/photo-1696846912973-3233cc80bf86?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
+                    alt="פרגולה דגם הייטיק"
+                  />
+                  <img
+                    class="rounded-lg shadow-lg w-full h-40 object-cover"
+                    src="https://images.unsplash.com/photo-1530491396055-5aca4203edbf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1371"
+                    alt="פרגולת הייטיק מקרוב"
+                  />
+                  <img
+                    class="rounded-lg shadow-lg w-full h-40 object-cover"
+                    src="https://images.unsplash.com/photo-1502258738801-89e429b20da3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1249"
+                    alt="פרגולת אלומיניום בעיצוב הייטיק"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- CTA band -->
+            <div
+              class="mt-10 bg-[#0a2143] text-white rounded-2xl shadow-lg px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+            >
+              <div class="max-w-2xl">
+                <h3 class="text-2xl md:text-3xl font-extrabold mb-2">
+                  מתאים לכם פרגולה קבועה ״הייטק״?
+                </h3>
+                <p class="text-white/90">
+                  נדאג לתכנון, ייצור והתקנה—בדיוק לפי הבית שלכם.
+                </p>
+              </div>
+
+              <div
+                class="flex flex-col lg:flex-row gap-3 lg:gap-4 w-full lg:w-auto"
+              >
+                <a
+                  href="#"
+                  class="w-full lg:w-auto sm:w-auto px-6 py-3 rounded-lg bg-[#92a5af] text-white text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black text-center"
+                >
+                  קבלו הצעת מחיר
+                </a>
+                <a
+                  href="./services.html"
+                  class="w-full lg:w-auto sm:w-auto px-6 py-3 rounded-lg bg-transparent border-2 border-white text-white text-base font-bold transition-colors hover:bg-white hover:text-[#0a2143] text-center"
+                >
+                  צפו בשירותים
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Tab: Standard -->
+          <section class="pt-8" x-show="activeTab==='standard'">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <!-- Text -->
+              <div>
+                <h2
+                  class="text-[#0a2143] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5"
+                >
+                  פרגולה סטנדרטית – הצללה עליונה
+                </h2>
+                <p
+                  class="text-gray-700 dark:text-gray-300 text-base leading-normal pb-6"
+                >
+                  פרגולה אלומיניום בהתאמה אישית עם תשתית חזקה, פרופילי הצללה לפי
+                  דרישה וכיסוי סנטף BH כולל אף מים ואיטום – פתרון משתלם ושימושי
+                  להצללה נעימה לאורך כל השנה.
+                </p>
+
+                <div class="space-y-6">
+                  <!-- יתרונות -->
+                  <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm"
+                  >
+                    <h3
+                      class="text-lg font-bold text-[#0a2143] dark:text-[#92a5af] mb-3"
+                    >
+                      יתרונות
+                    </h3>
+                    <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        התאמה מלאה לצרכי הלקוח (ממדים, צפיפות הצללה,
+                        קונסטרוקציה).
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        תשתית חזקה: קורות 100/40 או 120/40 בהתאם לגודל ועומק.
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        אפשרות לעמודים 100/100 או התקנה תלויה (מרחפת).
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        פרופילי הצללה 70/20 או 40/20 – בוחרים מידת הצל המועדפת.
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        כיסוי סנטף BH כולל אף מים ואיטום להפחתת רעש ונזילות.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Images -->
+              <div class="mt-5">
+                <div class="grid grid-cols-2 gap-4">
+                  <!-- Hero -->
+                  <img
+                    class="rounded-lg shadow-lg w-full h-64 object-cover col-span-2"
+                    src="https://images.unsplash.com/photo-1511731590992-303dbdfc5596?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=736"
+                    alt="פרגולה סטנדרטית עם הצללה עליונה"
+                  />
+                  <!-- Thumbs -->
+                  <img
+                    class="rounded-lg shadow-lg w-full h-40 object-cover"
+                    src="https://images.unsplash.com/photo-1696321061861-f549e8765e67?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
+                    alt="תקריב פרופילי הצללה אלומיניום"
+                  />
+                  <img
+                    class="rounded-lg shadow-lg w-full h-40 object-cover"
+                    src="https://images.unsplash.com/photo-1696846913141-634e2b1652e3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
+                    alt="חצר ביתית עם פרגולה סטנדרטית"
+                  />
+                </div>
+              </div>
+            </div>
+            <br />
+            <!-- מפרט וטווח מחירים + שאלות נפוצות - Grid layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- מפרט וטווח מחירים -->
+              <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+                <h3
+                  class="text-lg font-bold text-[#0a2143] dark:text-[#92a5af] mb-3"
+                >
+                  מפרט וטווח מחירים
+                </h3>
+                <ul
+                  class="list-disc pr-5 space-y-2 text-gray-700 dark:text-gray-300"
+                >
+                  <li>קורות תשתית: 100/40 או 120/40 (לפי גודל/עומק).</li>
+                  <li>עמודים: 100/100 או תלויה (מרחפת).</li>
+                  <li>פרופילי הצללה: 70/20 או 40/20 לפי דרישה.</li>
+                  <li>כיסוי: סנטף BH + אף מים + איטום.</li>
+                  <li>
+                    טווח מחירים:
+                    <span class="font-semibold">700–900 ₪ למ"ר</span> (לפי
+                    גודל), מינימום <span class="font-semibold">15 מ"ר</span>.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- שאלות נפוצות -->
+              <details
+                class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm"
+              >
+                <summary
+                  class="cursor-pointer font-bold text-[#0a2143] dark:text-white"
+                >
+                  שאלות נפוצות
+                </summary>
+                <div class="mt-4 space-y-3 text-gray-700 dark:text-gray-300">
+                  <div>
+                    <h4 class="font-semibold">אפשר לבחור את צפיפות ההצללה?</h4>
+                    <p class="text-sm">
+                      כן. בוחרים בין פרופילי 70/20 או 40/20 ומרווחים בהתאם
+                      להצללה הרצויה.
+                    </p>
+                  </div>
+                  <div
+                    class="pt-3 border-t border-gray-200 dark:border-gray-700"
+                  >
+                    <h4 class="font-semibold">
+                      האם יש איטום וניקוז למניעת נזילות?
+                    </h4>
+                    <p class="text-sm">
+                      כן. הכיסוי הוא סנטף BH וכולל אף מים ואיטום להפחתת רעשים
+                      ונזילות.
+                    </p>
+                  </div>
+                  <div
+                    class="pt-3 border-t border-gray-200 dark:border-gray-700"
+                  >
+                    <h4 class="font-semibold">מה המינימום להזמנה?</h4>
+                    <p class="text-sm">המינימום הוא 15 מ"ר.</p>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <!-- CTA band -->
+            <div
+              class="mt-10 bg-[#0a2143] text-white rounded-2xl shadow-lg px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+            >
+              <div class="max-w-2xl">
+                <h3 class="text-2xl md:text-3xl font-extrabold mb-2">
+                  מתאים לכם פרגולה סטנדרטית?
+                </h3>
+                <p class="text-white/90">
+                  נדאג לתכנון, ייצור והתקנה—בדיוק לפי הבית שלכם.
+                </p>
+              </div>
+
+              <div
+                class="flex flex-col lg:flex-row gap-3 lg:gap-4 w-full lg:w-auto"
+              >
+                <a
+                  href="#"
+                  class="w-full lg:w-auto sm:w-auto px-6 py-3 rounded-lg bg-[#92a5af] text-white text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black text-center"
+                >
+                  קבלו הצעת מחיר
+                </a>
+                <a
+                  href="./services.html"
+                  class="w-full lg:w-auto sm:w-auto px-6 py-3 rounded-lg bg-transparent border-2 border-white text-white text-base font-bold transition-colors hover:bg-white hover:text-[#0a2143] text-center"
+                >
+                  צפו בשירותים
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Tab: Glass -->
+          <section class="pt-8" x-show="activeTab==='glass'">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <div>
+                <h2
+                  class="text-primary dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5"
+                >
+                  פרגולות זכוכית
+                </h2>
+                <p
+                  class="text-text-primary dark:text-gray-300 text-base font-normal leading-normal pb-6 pt-1"
+                >
+                  פרגולות זכוכית נועדו למי שאוהב את המראה הפתוח של השמיים והשמש,
+                  אך גם רוצה ליהנות מהגנה מגשם ורוח. פרגולה אלגנטית עם תשתית
+                  אלומיניום חזקה, כיסוי זכוכית מחוסמת ומרזבים נסתרים לתוצאה
+                  יוקרתית ומודרנית.
+                </p>
+
+                <div class="space-y-6">
+                  <!-- יתרונות -->
+                  <div
+                    class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm"
+                  >
+                    <h3
+                      class="text-lg font-bold text-primary dark:text-accent mb-3"
+                    >
+                      יתרונות
+                    </h3>
+                    <ul class="space-y-2 text-text-primary dark:text-gray-300">
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        מאפשרת ליהנות מאור טבעי ונוף פתוח תוך הגנה מגשם.
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        מבנה אלומיניום עמיד במיוחד עם זכוכית מחוסמת בעובי 10
+                        מ״מ.
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        עיצוב יוקרתי ואסתטי למרפסות, כניסות ושטחים פתוחים.
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span
+                          class="mt-1 inline-block size-2 rounded-full bg-[#92a5af]"
+                        ></span>
+                        כולל מרזבים נסתרים לניקוז מים יעיל ולמניעת נזילות.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- שאלות נפוצות -->
+                  <details
+                    class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm"
+                  >
+                    <summary
+                      class="cursor-pointer font-bold text-[#0a2143] dark:text-white"
+                    >
+                      שאלות נפוצות
+                    </summary>
+                    <div
+                      class="mt-4 space-y-3 text-gray-700 dark:text-gray-300"
+                    >
+                      <div>
+                        <h4 class="font-semibold">האם הזכוכית בטיחותית?</h4>
+                        <p class="text-sm">
+                          כן, מדובר בזכוכית מחוסמת בעובי 10 מ״מ, העומדת בתקנים
+                          ומיועדת לעמידות גבוהה בפני פגיעות.
+                        </p>
+                      </div>
+                      <div
+                        class="pt-3 border-t border-gray-200 dark:border-gray-700"
+                      >
+                        <h4 class="font-semibold">האם נכנסים מים בזמן גשם?</h4>
+                        <p class="text-sm">
+                          לא. בפרגולה יש מערכת מרזבים נסתרים המונעת כניסת מים
+                          ומבטיחה ניקוז מושלם.
+                        </p>
+                      </div>
+                      <div
+                        class="pt-3 border-t border-gray-200 dark:border-gray-700"
+                      >
+                        <h4 class="font-semibold">מה טווח המחירים?</h4>
+                        <p class="text-sm">
+                          המחירים נעים בין 1,400 ₪ ל־1,800 ₪ למ״ר, בהתאם לגודל
+                          ולתנאי ההתקנה.
+                        </p>
+                      </div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <!-- תמונות -->
+              <div class="mt-5">
+                <div class="grid grid-cols-2 gap-4">
+                  <img
+                    class="rounded-lg shadow-lg w-full h-64 object-cover col-span-2"
+                    src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=1600&auto=format&fit=crop"
+                    alt="פרגולת זכוכית מודרנית"
+                  />
+                  <img
+                    class="rounded-lg shadow-lg w-full h-40 object-cover"
+                    src="https://images.unsplash.com/photo-1721956672751-8a3255928885?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
+                    alt="תקריב של פרגולת זכוכית"
+                  />
+                  <img
+                    class="rounded-lg shadow-lg w-full h-40 object-cover"
+                    src="https://images.unsplash.com/photo-1676658153750-58342fe41e14?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
+                    alt="פרגולת זכוכית בחצר ביתית"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA band -->
+            <div
+              class="mt-10 bg-[#0a2143] text-white rounded-2xl shadow-lg px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+            >
+              <div class="max-w-2xl">
+                <h3 class="text-2xl md:text-3xl font-extrabold mb-2">
+                  מתלבטים לגבי פרגולת זכוכית?
+                </h3>
+                <p class="text-white/90">
+                  נשמח ללוות אתכם בתכנון, בהתאמה אישית ובהתקנה מושלמת לכל עונה.
+                </p>
+              </div>
+
+              <div
+                class="flex flex-col lg:flex-row gap-3 lg:gap-4 w-full lg:w-auto"
+              >
+                <a
+                  href="#"
+                  class="w-full lg:w-auto sm:w-auto px-6 py-3 rounded-lg bg-[#92a5af] text-white text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black text-center"
+                >
+                  קבלו הצעת מחיר
+                </a>
+                <a
+                  href="./services.html"
+                  class="w-full lg:w-auto sm:w-auto px-6 py-3 rounded-lg bg-transparent border-2 border-white text-white text-base font-bold transition-colors hover:bg-white hover:text-[#0a2143] text-center"
+                >
+                  צפו בשירותים
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- ===== FOOTER (same as improved site footer, with tablet ordering) ===== -->
+      <footer class="bg-primary text-white mt-auto">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="space-y-4">
+              <div class="flex items-center md:items-start gap-4">
+                <div
+                  class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
+                >
+                  <a href="./index.html"
+                    ><img src="./Assets/Logo - RHINO .png" alt="Logo"
+                  /></a>
+                </div>
+                <h2 class="text-xl font-bold">ריינו סוככים</h2>
+              </div>
+              <p class="text-gray-300">
+                פתרונות הצללה מתקדמים לבית ולעסק. אנו מתמחים בסוככים, פרגולות,
+                סגירות חורף וגדרות אלומיניום בהתאמה אישית.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold">קישורים מהירים</h3>
+              <ul class="mt-4 space-y-2">
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="./about-us.html"
+                    >אודות</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="./services.html"
+                    >שירותים</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="./projects.html"
+                    >פרויקטים</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="#"
+                    >יצירת קשר</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold">שירותים</h3>
+              <ul class="mt-4 space-y-2">
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="#"
+                    >סוככים</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="#"
+                    >פרגולות
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="./enclosures.html"
+                    >סגירות חורף</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-gray-300 hover:text-white transition-colors"
+                    href="./fences.html"
+                    >גדרות אלומיניום</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold">יצירת קשר</h3>
+              <ul class="mt-4 space-y-2 text-gray-300">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="feather feather-map-pin"
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                  >
+                    <path
+                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                    ></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>העבודה 15, תל אביב</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="feather feather-phone"
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    ></path>
+                  </svg>
+                  <span>050-1234567</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="feather feather-mail"
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span class="break-words">contact@shadesolutions.co.il</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bottom row -->
+          <div
+            class="mt-16 pt-8 border-t border-white/20 text-center md:text-right text-gray-400 text-sm"
+          >
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start sm:items-center"
+            >
+              <!-- Newsletter -->
+              <div
+                class="order-1 sm:order-1 md:order-2 lg:order-1 text-center sm:text-right"
+              >
+                <h3 class="text-lg font-bold text-white mb-1">
+                  הישארו מעודכנים
+                </h3>
+                <p class="text-gray-300 text-sm mb-3">
+                  קבלו עדכונים, מבצעים ופרויקטים חדשים ישירות למייל.
+                </p>
+                <form
+                  class="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3"
+                >
+                  <input
+                    type="email"
+                    placeholder="כתובת האימייל שלך"
+                    class="w-full sm:w-56 px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#92a5af]"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    class="px-5 py-2 bg-[#92a5af] text-white font-bold rounded-lg hover:bg-white hover:text-[#0a2143] transition-all"
+                  >
+                    הירשם
+                  </button>
+                </form>
+              </div>
+
+              <!-- Privacy / Terms -->
+              <div
+                class="order-2 sm:order-2 md:order-1 lg:order-2 flex justify-center sm:justify-start lg:justify-center gap-6 text-gray-300"
+              >
+                <a href="#" class="hover:text-white transition-colors"
+                  >מדיניות פרטיות</a
+                >
+                <a href="#" class="hover:text-white transition-colors"
+                  >תנאי שימוש</a
+                >
+              </div>
+
+              <!-- Copyright (bottom on tablet) -->
+              <div
+                class="order-3 sm:order-3 md:order-3 lg:order-3 md:col-span-2 lg:col-span-1 text-center sm:text-center text-gray-400 mt-4 sm:mt-6 lg:mt-0"
+              >
+                <p>© 2024 ריינו סוככים. כל הזכויות שמורות.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Mobile menu script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("mobileBtn");
+        const panel = document.getElementById("mobilePanel");
+        const icOpen = document.getElementById("mobileIconOpen");
+        const icClose = document.getElementById("mobileIconClose");
+        if (!btn || !panel) return;
+        const setOpen = (open) => {
+          panel.classList.toggle("hidden", !open);
+          btn.setAttribute("aria-expanded", String(open));
+          icOpen?.classList.toggle("hidden", open);
+          icClose?.classList.toggle("hidden", !open);
+          document.documentElement.classList.toggle("overflow-hidden", open);
+        };
+        setOpen(false);
+        btn.addEventListener("click", () =>
+          setOpen(panel.classList.contains("hidden"))
+        );
+        document.addEventListener(
+          "keydown",
+          (e) => e.key === "Escape" && setOpen(false)
+        );
+        document.addEventListener("click", (e) => {
+          if (!panel.classList.contains("hidden")) {
+            const within = panel.contains(e.target) || btn.contains(e.target);
+            if (!within) setOpen(false);
+          }
+        });
+      });
+    </script>
+
+    <!-- Alpine (tabs) -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </body>
+</html>
