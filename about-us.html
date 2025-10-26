@@ -110,11 +110,6 @@
                 >
                   <a
                     class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
-                    href="#"
-                    >סוככים</a
-                  >
-                  <a
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
                     href="./pergolas.html"
                     >פרגולות</a
                   >
@@ -232,11 +227,6 @@
                 <div class="mt-2 ps-4 space-y-2">
                   <a
                     class="block text-white/90 hover:text-[#92a5af] transition-colors"
-                    href="#"
-                    >סוככים</a
-                  >
-                  <a
-                    class="block text-white/90 hover:text-[#92a5af] transition-colors"
                     href="./pergolas.html"
                     >פרגולות</a
                   >
@@ -309,7 +299,7 @@
               <p
                 class="mt-6 text-lg text-gray-600 dark:text-gray-300 leading-8"
               >
-                ריינו סוככים היא חברה ישראלית מובילה, שהוקמה בשנת 2005, ומתמחה
+                ריינו סוככים היא חברה ישראלית מובילה, שהוקמה בשנת 2015, ומתמחה
                 בתכנון, ייצור והתקנה של פתרונות הצללה וחיפוי מתקדמים. אנו מציעים
                 מגוון רחב של סוככים, פרגולות, גדרות אלומיניום וסגירות מרפסת, תוך
                 שימוש בחומרים האיכותיים ביותר ובטכנולוגיות המתקדמות ביותר.
@@ -320,26 +310,46 @@
 
         <section class="bg-white dark:bg-background-dark/50 py-16 sm:py-24">
           <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
+            <!-- LONG DESCRIPTION: moves BELOW image on tablet, spans both cols -->
+            <p
+              class="text-gray-600 text-xl dark:text-gray-300 md:order-3 md:col-span-2"
+            >
+              חברתנו מתמחה בייצור והרכבת פרגולות, גדרות ושערים מאלומיניום. התקנת
+              כל סוגי הסוככים, התקנת מסכי זיפ, תפירה והתקנת רשתות הצללה וברזנטים
+              בכל גודל/צבע ובהתרמה אישית. אנו מומחים בייצור מוצרי הצללה מתקדמים
+              וסגירות המותאמות אישית לכל מטרה, גודל או דרישות צבע. יש אצלנו
+              מתפרה במקום התופרת לפי מידה רשתות כיסויים עם התמקדות בחדשנות
+              ואיכות. אנו מציעים מגוון רחב של פתרונות הצללה המותאמים לצרכים
+              האישיים. בין אם זה למטרות מגורים, מסחריות או תעשייתיות, המוצרים
+              שלנו נועדו לספק פונקציונליות אופטימלית ומשיכה אסתטית.
+            </p>
+            <br />
+            <!-- Make 3 items in the grid so we can reorder on md -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start md:items-center"
+            >
+              <!-- RIGHT COLUMN: Title + bullet text + CTAs (becomes order-2 on md) -->
+              <div class="md:order-2">
                 <h3 class="text-3xl font-bold text-primary mb-4">
                   המשימה והחזון שלנו
                 </h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                  המשימה שלנו היא להעניק לכל לקוח פתרון הצללה וחיפוי מותאם
-                  אישית, המשלב בין אסתטיקה מודרנית, פונקציונליות מקסימלית
-                  ועמידות לאורך שנים. אנו שואפים לשפר את איכות החיים של
-                  לקוחותינו על ידי יצירת מרחבים חיצוניים נעימים, שימושיים
-                  ומעוצבים.
+
+                <!-- (short) bullet block stays here -->
+                <p
+                  class="text-black text-l dark:text-gray-300 border border-gray-300/60 dark:border-white/10 rounded-xl p-6 mb-6"
+                >
+                  - אנחנו שונים משאר המתחרים בעיקר באיכות המוצר, שירות מהיר
+                  וזמינות.<br /><br />
+                  - מבחינת עונתיות: מי שמעוניין בסגירת חורף ומסכי זיפ עדיף
+                  להתחיל להזמין בקיץ ולא לחכות לרגע האחרון.<br /><br />
+                  - הצעות מחיר- הצעות מחיר דרך וצאפ נותנים הצעה גסה ואם ההצעה
+                  מתאימה ללקוח והוא מעוניין לסגור עסקה אז מגיעים לשטח ולוקחים
+                  מידות מדויקות ונותנים מחיר סופי.
                 </p>
-                <p class="text-gray-600 dark:text-gray-300">
-                  החזון שלנו הוא להיות החברה המובילה והמוערכת ביותר בישראל בתחום
-                  פתרונות ההצללה והחיפוי, תוך הקפדה על חדשנות, איכות בלתי מתפשרת
-                  ושירות לקוחות יוצא דופן. אנו מאמינים בערכים של מקצועיות,
-                  אמינות, שקיפות ומחויבות מלאה ללקוחותינו.
-                </p>
+
+                <!-- CTAs move up on tablet (sit right under the bullets) -->
                 <div
-                  class="flex flex-col md:flex-row md:space-x-4 md:space-x-reverse space-y-3 md:space-y-0 mt-6"
+                  class="flex flex-col md:flex-row md:space-x-4 md:space-x-reverse space-y-3 md:space-y-0"
                 >
                   <button
                     class="w-full md:w-auto px-8 py-4 md:px-6 md:py-3 rounded-lg bg-primary text-white text-lg md:text-base font-bold hover:bg-primary/90 transition-all transform hover:scale-105 shadow-lg"
@@ -353,8 +363,10 @@
                   </button>
                 </div>
               </div>
+
+              <!-- IMAGE: becomes order-1 on md -->
               <div
-                class="rounded-xl overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-105"
+                class="rounded-xl overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-105 md:order-1"
               >
                 <img
                   alt="Company vision and mission"
