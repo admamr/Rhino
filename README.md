@@ -42,7 +42,7 @@
 להרצת האתר באופן מקומי:
 
 ```bash
-git clone https://github.com/<your-username>/rhino-shades.git
+git clone https://github.com/<your-username>/Rhino.git
 cd rhino-shades
 
 ולפתוח את הקובץ index.html בדפדפן.
