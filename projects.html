@@ -787,12 +787,13 @@
               <div
                 class="order-2 sm:order-2 md:order-1 lg:order-2 flex justify-center sm:justify-start lg:justify-center gap-6 text-gray-300"
               >
-                <a href="#" class="hover:text-white transition-colors"
+                <a href="./privacy.html" class="hover:text-white transition-colors"
                   >מדיניות פרטיות</a
                 >
-                <a href="#" class="hover:text-white transition-colors"
+                <a href="./terms.html" class="hover:text-white transition-colors"
                   >תנאי שימוש</a
                 >
+                <a href="#" id="openCookiePrefs" class="underline hover:opacity-80">ניהול עוגיות</a>
               </div>
 
               <!-- Copyright -->
@@ -1053,5 +1054,221 @@
         });
       });
     </script>
+
+       <!-- Cookies Banner -->
+<div id="cookieBanner" dir="rtl"
+class="fixed inset-x-0 bottom-0 z-[60] bg-white/95 dark:bg-[#0b1420]/95 backdrop-blur border-t border-gray-200/60 dark:border-white/10 shadow-lg">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+ <p class="text-sm text-gray-700 dark:text-gray-200 leading-6">
+   אנו משתמשים בעוגיות (Cookies) לשיפור חוויית הגלישה, ניתוח תנועה ותצוגת תוכן מותאם.
+   ניתן לנהל העדפות בכל עת.
+   <a href="./privacy.html" class="underline font-semibold hover:opacity-80">קראו עוד במדיניות הפרטיות</a>.
+ </p>
+ <div class="flex items-center gap-2">
+  <button id="cookieCustomize"
+  class="px-3 py-1.5 text-xs md:text-sm rounded-md border border-gray-300 dark:border-white/20 text-gray-800 dark:text-white hover:bg-gray-50 dark:hover:bg-white/10">
+  נהל העדפות
+</button>
+<button id="cookieRejectAll"
+  class="px-3 py-1.5 text-xs md:text-sm rounded-md bg-gray-200 text-gray-900 hover:bg-gray-300 font-semibold">
+  דחה הכל
+</button>
+<button id="cookieAcceptAll"
+  class="px-3 py-1.5 text-xs md:text-sm rounded-md bg-[#0a2143] text-white hover:bg-[#0b2a57] font-semibold">
+  אשר הכל
+</button>
+ </div>
+</div>
+</div>
+</div>
+
+<!-- Preferences Modal -->
+<div id="cookiePrefsModal" class="hidden fixed inset-0 z-[70]">
+<div class="absolute inset-0 bg-black/50"></div>
+<div class="relative mx-auto my-10 w-full max-w-2xl bg-white dark:bg-[#0b1420] rounded-2xl shadow-2xl border border-gray-200/60 dark:border-white/10">
+<div class="px-6 py-5 border-b border-gray-200/60 dark:border-white/10 flex items-center justify-between">
+ <h3 class="text-xl font-extrabold text-[#0a2143] dark:text-white">העדפות עוגיות</h3>
+ <button id="cookiePrefsClose" class="p-2 rounded hover:bg-gray-100 dark:hover:bg-white/10" aria-label="סגור">✕</button>
+</div>
+<div class="px-6 py-5 space-y-5 text-sm">
+ <!-- Essential (always on) -->
+ <div class="flex items-start gap-3">
+   <input type="checkbox" checked disabled class="mt-1">
+   <div>
+     <p class="font-bold">חיוניות (תמיד פעיל)</p>
+     <p class="text-gray-600 dark:text-gray-300">נדרשות לתפקוד בסיסי של האתר (אבטחה, שפה, סשן).</p>
+   </div>
+ </div>
+
+ <!-- Analytics -->
+ <div class="flex items-start gap-3">
+   <input id="ck-analytics" type="checkbox" class="mt-1">
+   <div>
+     <p class="font-bold">אנליטיקה</p>
+     <p class="text-gray-600 dark:text-gray-300">מדידת שימוש ושיפור חוויית משתמש (כגון Google Analytics במצב אנונימי).</p>
+   </div>
+ </div>
+
+ <!-- Marketing -->
+ <div class="flex items-start gap-3">
+   <input id="ck-marketing" type="checkbox" class="mt-1">
+   <div>
+     <p class="font-bold">שיווק</p>
+     <p class="text-gray-600 dark:text-gray-300">פיקסלים ורימרקטינג (למשל Meta Pixel/Google Ads).</p>
+   </div>
+ </div>
+
+ <!-- Functional -->
+ <div class="flex items-start gap-3">
+   <input id="ck-functional" type="checkbox" class="mt-1">
+   <div>
+     <p class="font-bold">פונקציונלי</p>
+     <p class="text-gray-600 dark:text-gray-300">תכונות נוספות כמו מפות, סרטוני וידאו מוטמעים, צ'אט.</p>
+   </div>
+ </div>
+</div>
+<div class="px-6 py-5 border-t border-gray-200/60 dark:border-white/10 flex items-center justify-between">
+ <button id="cookiePrefsReject" class="px-4 py-2 rounded-lg bg-gray-200 text-gray-900 hover:bg-gray-300 font-bold">דחה הכל</button>
+ <div class="flex gap-2">
+   <button id="cookiePrefsSave" class="px-4 py-2 rounded-lg bg-[#0a2143] text-white hover:bg-[#0b2a57] font-bold">שמור העדפות</button>
+ </div>
+</div>
+</div>
+</div>
+
+<script>
+  (function() {
+    const LS_KEY = 'cookieConsent.v1';
+    const $ = (id) => document.getElementById(id);
+
+    const banner = $('cookieBanner');
+    const modal  = $('cookiePrefsModal');
+    const btnOpenPrefs   = $('cookieCustomize');
+    const btnManageLink  = $('openCookiePrefs');
+    const btnAcceptAll   = $('cookieAcceptAll');
+    const btnRejectAll   = $('cookieRejectAll');
+    const btnCloseModal  = $('cookiePrefsClose');
+    const btnPrefsReject = $('cookiePrefsReject');
+    const btnPrefsSave   = $('cookiePrefsSave');
+
+    const ckAnalytics  = $('ck-analytics');
+    const ckMarketing  = $('ck-marketing');
+    const ckFunctional = $('ck-functional');
+
+    const defaultConsent = {
+      essential: true,
+      analytics: false,
+      marketing: false,
+      functional: false,
+      ts: null
+    };
+
+    const readConsent = () => {
+      try { return JSON.parse(localStorage.getItem(LS_KEY)) || null; }
+      catch { return null; }
+    };
+
+    const writeConsent = (obj) => {
+      const payload = { ...obj, ts: new Date().toISOString() };
+      localStorage.setItem(LS_KEY, JSON.stringify(payload));
+      return payload;
+    };
+
+    const openModal = () => { modal.classList.remove('hidden'); document.documentElement.classList.add('overflow-hidden'); };
+    const closeModal = () => { modal.classList.add('hidden'); document.documentElement.classList.remove('overflow-hidden'); };
+
+    // Apply consent: load/disable tools accordingly
+    function applyConsent(c) {
+      // Google Consent Mode v2 (if you use GA/Ads)
+      if (window.gtag) {
+        window.gtag('consent', 'update', {
+          'analytics_storage': c.analytics ? 'granted' : 'denied',
+          'ad_storage':       c.marketing ? 'granted' : 'denied',
+          'ad_user_data':     c.marketing ? 'granted' : 'denied',
+          'ad_personalization': c.marketing ? 'granted' : 'denied',
+          'functionality_storage': c.functional ? 'granted' : 'denied',
+          'security_storage': 'granted'
+        });
+      }
+
+      // Load deferred scripts tagged by category
+      document.querySelectorAll('script[type="text/plain"][data-cookie-category]').forEach(tag => {
+        const cat = tag.getAttribute('data-cookie-category');
+        if (cat && c[cat]) {
+          const s = document.createElement('script');
+          // copy attributes
+          for (const {name, value} of tag.attributes) {
+            if (name === 'type' || name === 'data-cookie-category') continue;
+            s.setAttribute(name, value);
+          }
+          s.text = tag.text || '';
+          s.async = true;
+          tag.parentNode.insertBefore(s, tag);
+          tag.remove();
+        }
+      });
+
+      // Example: toggle iframes (e.g., maps/videos) by data-cookie-category
+      document.querySelectorAll('[data-cookie-category][data-src]').forEach(el => {
+        const cat = el.getAttribute('data-cookie-category');
+        if (cat && c[cat] && !el.getAttribute('src')) {
+          el.setAttribute('src', el.getAttribute('data-src'));
+        }
+      });
+    }
+
+    // Initialize
+    const existing = readConsent();
+    if (existing) {
+      banner.classList.add('hidden');   // already decided
+      ckAnalytics.checked  = !!existing.analytics;
+      ckMarketing.checked  = !!existing.marketing;
+      ckFunctional.checked = !!existing.functional;
+      applyConsent(existing);
+    } else {
+      banner.classList.remove('hidden'); // show banner
+    }
+
+    // Handlers
+    btnAcceptAll?.addEventListener('click', () => {
+      const c = writeConsent({ ...defaultConsent, analytics: true, marketing: true, functional: true });
+      banner.classList.add('hidden');
+      applyConsent(c);
+    });
+
+    const rejectAll = () => {
+      const c = writeConsent({ ...defaultConsent, analytics: false, marketing: false, functional: false });
+      banner.classList.add('hidden');
+      closeModal();
+      applyConsent(c);
+    };
+
+    btnRejectAll?.addEventListener('click', rejectAll);
+    btnPrefsReject?.addEventListener('click', rejectAll);
+
+    btnOpenPrefs?.addEventListener('click', openModal);
+    btnManageLink?.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+
+    btnCloseModal?.addEventListener('click', closeModal);
+
+    btnPrefsSave?.addEventListener('click', () => {
+      const c = writeConsent({
+        ...defaultConsent,
+        analytics:  ckAnalytics.checked,
+        marketing:  ckMarketing.checked,
+        functional: ckFunctional.checked
+      });
+      banner.classList.add('hidden');
+      closeModal();
+      applyConsent(c);
+    });
+
+    // Close modal on overlay click
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  })();
+</script>
   </body>
 </html>

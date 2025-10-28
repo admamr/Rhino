@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="he">
+<html dir="rtl" lang="he" class="light">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>צור קשר – ריינו סוככים</title>
-    <link href="./Assets/Logo - RHINO .png" rel="icon" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>תנאי שימוש – ריינו סוככים</title>
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
       tailwind.config = {
@@ -22,44 +17,45 @@
               accent: "#92a5af",
               "background-light": "#f6f7f8",
               "background-dark": "#111821",
+              "text-primary": "#111821",
+              "text-dark": "#f6f7f8",
+              muted: "#6b7280",
             },
-            fontFamily: {
-              display: ["Manrope", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.5rem",
-              lg: "1rem",
-              xl: "1.5rem",
-              full: "9999px",
-            },
-            boxShadow: {
-              soft: "0 10px 20px rgba(0,0,0,.06)",
-            },
+            fontFamily: { display: ["Manrope", "ui-sans-serif", "system-ui"] },
+            borderRadius: { xl: "1.25rem" },
+            boxShadow: { soft: "0 10px 25px -12px rgba(0,0,0,.15)" },
           },
         },
       };
     </script>
+
+    <!-- Fonts / Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
     <style>
       body {
-        font-family: "Manrope", sans-serif;
+        font-family: "Manrope", ui-sans-serif, system-ui;
       }
-      [x-cloak] {
-        display: none !important;
-      }
-      select {
-        background-position: left 1rem center; /* push arrow inward */
-        padding-left: 2.5rem; /* room for arrow */
-        direction: rtl; /* keep text RTL */
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
       }
     </style>
   </head>
 
   <body
-    class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200"
+    class="bg-background-light dark:bg-background-dark text-text-primary dark:text-dark"
   >
-    <div class="flex flex-col min-h-screen">
-      <!-- HEADER (same as other pages) -->
-      <header class="sticky top-0 z-50 bg-[#0a2143]">
+    <div class="min-h-screen flex flex-col">
+      <!-- Header -->
+      <header class="sticky top-0 z-50 bg-[#0a2143] backdrop-blur-0">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div
             class="flex items-center justify-between h-20 border-b border-white/10"
@@ -69,11 +65,11 @@
               <div
                 class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shrink-0"
               >
-                <a href="./index.html" aria-label="דף הבית">
+                <a href="./index.html">
                   <img
                     class="max-h-12 sm:max-h-14 w-auto"
                     src="./Assets/Logo - RHINO .png"
-                    alt="Rhino Shades Logo"
+                    alt="Logo"
                   />
                 </a>
               </div>
@@ -84,14 +80,15 @@
               class="hidden lg:flex items-center gap-x-8 text-base font-medium"
             >
               <a
-                class="text-white hover:text-accent transition-colors"
+                class="text-white hover:text-[#92a5af] transition-colors"
                 href="./index.html"
                 >דף הבית</a
               >
+
               <div class="relative group">
                 <a
                   href="./services.html"
-                  class="text-white hover:text-accent transition-colors flex items-center gap-1"
+                  class="text-white hover:text-[#92a5af] transition-colors flex items-center gap-1"
                 >
                   <span>שירותים</span>
                   <svg
@@ -112,58 +109,58 @@
                   class="absolute right-0 top-full bg-white shadow-lg rounded-lg py-2 w-48 invisible opacity-0 translate-y-2 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0"
                 >
                   <a
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
                     href="./pergolas.html"
                     >פרגולות</a
                   >
                   <a
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
                     href="./fences.html"
                     >גדרות אלומיניום</a
                   >
                   <a
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#0a2143]"
                     href="./enclosures.html"
-                    >סגירות חורף</a
+                    >סגירות מרפסת</a
                   >
                 </div>
               </div>
+
               <a
-                class="text-white hover:text-accent transition-colors"
+                class="text-white hover:text-[#92a5af] transition-colors"
                 href="./projects.html"
                 >פרויקטים</a
               >
               <a
-                class="text-white hover:text-accent transition-colors"
+                class="text-white hover:text-[#92a5af] transition-colors"
                 href="./about-us.html"
                 >אודות</a
               >
-              
             </nav>
 
             <!-- Desktop actions -->
             <div class="hidden lg:flex items-center gap-x-4">
-              <a
-                href="./contact.html"
-                class="px-5 py-3 rounded-lg bg-accent text-white text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black"
+              <button
+                class="px-5 py-3 rounded-lg bg-[#92a5af] text-white text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black"
               >
-               יצירת קשר </a>
-               <a
-               href="https://wa.me/972533832323"
-               class="p-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
-               aria-label="WhatsApp"
-             >
-               <svg
-                 viewBox="0 0 24 24"
-                 class="w-5 h-5 text-white"
-                 fill="currentColor"
-                 aria-hidden="true"
-               >
-                 <path
-                   d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 3.48 8.52L2 24l3.6-1.44A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52ZM12 21.82c-1.94 0-3.74-.57-5.26-1.56l-.38-.24-2.14.86.82-2.08-.25-.4A9.81 9.81 0 0 1 2.18 12C2.18 6.56 6.56 2.18 12 2.18S21.82 6.56 21.82 12 17.44 21.82 12 21.82Zm5.02-6.46c-.28-.14-1.67-.83-1.93-.92-.26-.1-.45-.14-.64.14-.19.28-.74.92-.9 1.11-.17.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.37-.82-.72-1.37-1.6-1.53-1.88-.16-.28-.02-.44.12-.58.12-.12.28-.33.43-.5.14-.17.19-.28.29-.47.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.1-.23-.55-.46-.47-.64-.48l-.55-.01c-.19 0-.5.07-.76.36s-.99.97-.99 2.35 1.02 2.73 1.17 2.92c.14.19 2 3.05 4.84 4.27.68.29 1.2.46 1.61.59.68.22 1.3.19 1.79.11.55-.08 1.67-.68 1.9-1.33.23-.64.23-1.21.16-1.33-.07-.12-.26-.19-.54-.33Z"
-                 />
-               </svg>
-             </a>
+                <a href="./contact.html"> יצירת קשר</a>
+              </button>
+              <a
+                href="https://wa.me/972533832323"
+                class="p-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
+                aria-label="WhatsApp"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  class="w-5 h-5 text-white"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 3.48 8.52L2 24l3.6-1.44A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52ZM12 21.82c-1.94 0-3.74-.57-5.26-1.56l-.38-.24-2.14.86.82-2.08-.25-.4A9.81 9.81 0 0 1 2.18 12C2.18 6.56 6.56 2.18 12 2.18S21.82 6.56 21.82 12 17.44 21.82 12 21.82Zm5.02-6.46c-.28-.14-1.67-.83-1.93-.92-.26-.1-.45-.14-.64.14-.19.28-.74.92-.9 1.11-.17.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.37-.82-.72-1.37-1.6-1.53-1.88-.16-.28-.02-.44.12-.58.12-.12.28-.33.43-.5.14-.17.19-.28.29-.47.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.1-.23-.55-.46-.47-.64-.48l-.55-.01c-.19 0-.5.07-.76.36s-.99.97-.99 2.35 1.02 2.73 1.17 2.92c.14.19 2 3.05 4.84 4.27.68.29 1.2.46 1.61.59.68.22 1.3.19 1.79.11.55-.08 1.67-.68 1.9-1.33.23-.64.23-1.21.16-1.33-.07-.12-.26-.19-.54-.33Z"
+                  />
+                </svg>
+              </a>
             </div>
 
             <!-- Hamburger -->
@@ -205,360 +202,268 @@
             </button>
           </div>
 
-          <!-- Mobile nav -->
+          <!-- Mobile nav panel -->
           <div
             id="mobilePanel"
             class="lg:hidden hidden border-b border-white/10 bg-[#0a2143]"
           >
             <div class="px-4 sm:px-6 lg:px-8 py-4 space-y-4">
               <a
-                class="block text-white hover:text-accent transition-colors"
+                class="block text-white hover:text-[#92a5af] transition-colors"
                 href="./index.html"
                 >דף הבית</a
               >
               <details class="block">
                 <summary
-                  class="cursor-pointer text-white hover:text-accent transition-colors"
+                  class="cursor-pointer text-white hover:text-[#92a5af] transition-colors"
                 >
                   שירותים
                 </summary>
                 <div class="mt-2 ps-4 space-y-2">
                   <a
-                    class="block text-white/90 hover:text-accent transition-colors"
+                    class="block text-white/90 hover:text-[#92a5af] transition-colors"
                     href="./pergolas.html"
                     >פרגולות</a
                   >
                   <a
-                    class="block text-white/90 hover:text-accent transition-colors"
+                    class="block text-white/90 hover:text-[#92a5af] transition-colors"
                     href="./fences.html"
                     >גדרות אלומיניום</a
                   >
                   <a
-                    class="block text-white/90 hover:text-accent transition-colors"
+                    class="block text-white/90 hover:text-[#92a5af] transition-colors"
                     href="./enclosures.html"
-                    >סגירות חורף</a
+                    >סגירות מרפסת</a
                   >
                 </div>
               </details>
               <a
-                class="block text-white hover:text-accent transition-colors"
+                class="block text-white hover:text-[#92a5af] transition-colors"
                 href="./projects.html"
                 >פרויקטים</a
               >
               <a
-                class="block text-white hover:text-accent transition-colors"
+                class="block text-white hover:text-[#92a5af] transition-colors"
                 href="./about-us.html"
                 >אודות</a
               >
-              
 
               <div class="pt-2 flex gap-2">
                 <button
                   class="flex-1 px-5 py-3 rounded-lg bg-[#92a5af] text-[#0a2143] text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black"
                 >
-                  <a href="./contact.html"> יצירת קשר</a>
+                  <a href="/contact.html"> יצירת קשר</a>
                 </button>
                 <a
-                href="https://wa.me/972533832323"
-                class="p-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
-                aria-label="WhatsApp"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  class="w-5 h-5 text-white"
-                  fill="currentColor"
-                  aria-hidden="true"
+                  href="https://wa.me/972533832323"
+                  class="p-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
+                  aria-label="WhatsApp"
                 >
-                  <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 3.48 8.52L2 24l3.6-1.44A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52ZM12 21.82c-1.94 0-3.74-.57-5.26-1.56l-.38-.24-2.14.86.82-2.08-.25-.4A9.81 9.81 0 0 1 2.18 12C2.18 6.56 6.56 2.18 12 2.18S21.82 6.56 21.82 12 17.44 21.82 12 21.82Zm5.02-6.46c-.28-.14-1.67-.83-1.93-.92-.26-.1-.45-.14-.64.14-.19.28-.74.92-.9 1.11-.17.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.37-.82-.72-1.37-1.6-1.53-1.88-.16-.28-.02-.44.12-.58.12-.12.28-.33.43-.5.14-.17.19-.28.29-.47.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.1-.23-.55-.46-.47-.64-.48l-.55-.01c-.19 0-.5.07-.76.36s-.99.97-.99 2.35 1.02 2.73 1.17 2.92c.14.19 2 3.05 4.84 4.27.68.29 1.2.46 1.61.59.68.22 1.3.19 1.79.11.55-.08 1.67-.68 1.9-1.33.23-.64.23-1.21.16-1.33-.07-.12-.26-.19-.54-.33Z"
-                  />
-                </svg>
-              </a>
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="w-5 h-5 text-white"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 3.48 8.52L2 24l3.6-1.44A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52ZM12 21.82c-1.94 0-3.74-.57-5.26-1.56l-.38-.24-2.14.86.82-2.08-.25-.4A9.81 9.81 0 0 1 2.18 12C2.18 6.56 6.56 2.18 12 2.18S21.82 6.56 21.82 12 17.44 21.82 12 21.82Zm5.02-6.46c-.28-.14-1.67-.83-1.93-.92-.26-.1-.45-.14-.64.14-.19.28-.74.92-.9 1.11-.17.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.37-.82-.72-1.37-1.6-1.53-1.88-.16-.28-.02-.44.12-.58.12-.12.28-.33.43-.5.14-.17.19-.28.29-.47.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.1-.23-.55-.46-.47-.64-.48l-.55-.01c-.19 0-.5.07-.76.36s-.99.97-.99 2.35 1.02 2.73 1.17 2.92c.14.19 2 3.05 4.84 4.27.68.29 1.2.46 1.61.59.68.22 1.3.19 1.79.11.55-.08 1.67-.68 1.9-1.33.23-.64.23-1.21.16-1.33-.07-.12-.26-.19-.54-.33Z"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      <!-- MAIN -->
-      <main class="flex-grow container mx-auto px-6 py-16 md:py-24">
-        <div class="max-w-7xl mx-auto">
-          <!-- Title -->
-          <div class="flex flex-col items-start gap-4 mb-10">
+      <!-- Main -->
+      <main class="flex-1">
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+          <div class="text-center mb-10">
             <h1
-              class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
+              class="text-4xl sm:text-5xl font-extrabold text-primary dark:text-white"
             >
-              צור קשר
+              תנאי שימוש
             </h1>
-            <p class="text-gray-600 dark:text-gray-400 md:max-w-2xl">
-              יש לכם שאלה או רוצים להתחיל פרויקט? השאירו פרטים ונחזור אליכם עם
-              ייעוץ והצעת מחיר מותאמת.
+            <p class="mt-3 text-base text-muted dark:text-gray-400">
+              עודכן לאחרונה: 1 באוקטובר 2023
             </p>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
-            <!-- Form card -->
-            <div class="lg:col-span-3">
-              <div
-                class="rounded-2xl bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-800 shadow-premium-lg p-6 md:p-8"
-              >
-                <!-- Title + sub -->
-                <h2 class="text-3xl font-bold text-primary mb-3">השאירו פרטים ונחזור אליכם</h2>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">
-                  מלאו את הטופס וניצור אתכם קשר לייעוץ אישי והצעת מחיר מותאמת לצרכים שלכם.
-                  </p>
+          <div
+            class="bg-white dark:bg-background-dark/40 rounded-2xl shadow-soft p-6 sm:p-8 space-y-10"
+          >
+            <!-- Intro -->
+            <section>
+              <h2 class="text-2xl font-bold text-primary dark:text-white mb-3">
+                מבוא
+              </h2>
+              <p class="leading-relaxed text-gray-700 dark:text-gray-300">
+                ברוכים הבאים לאתר של ריינו סוככים (להלן: “החברה”). השימוש באתר
+                כפוף לתנאים המפורטים במסמך זה. כניסה לאתר ושימוש בו מהווים הסכמה
+                מלאה לתנאים. אם אינך מסכים/ה – אנא הימנע/י משימוש באתר.
+              </p>
+            </section>
 
-                <!-- Form -->
-                <form class="space-y-6">
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                 
-
-                    <!-- name -->
-                    <div>
-                      <label for="name" class="sr-only">שם מלא</label>
-                      <input
-                        id="name"
-                        type="text"
-                        required
-                        placeholder="שם מלא *"
-                        class="w-full h-14 rounded-xl bg-background-light dark:bg-background-dark/50 border border-gray-200 dark:border-gray-700 px-4 text-gray-800 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0a2143]"
-                      />
-                    </div>
-
-                    <!-- phone -->
-                    <div>
-                      <label for="phone" class="sr-only">טלפון</label>
-                      <input
-                        id="phone"
-                        type="tel"
-                        required
-                        placeholder="טלפון *"
-                        class="w-full h-14 rounded-xl bg-background-light dark:bg-background-dark/50 border border-gray-200 dark:border-gray-700 px-4 text-gray-800 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0a2143]"
-                      />
-                    </div>
-   
-                    <!-- reason -->
-                    <div class="relative">
-                      <select
-                        id="service"
-                        class="w-full h-14 rounded-xl bg-background-light dark:bg-background-dark/50 border border-gray-200 dark:border-gray-700 px-4 pr-10 text-gray-800 dark:text-gray-100 appearance-none focus:outline-none focus:ring-2 focus:ring-[#0a2143]"
-                      >
-                        <option selected disabled>פניה בקשר ל-</option>
-                        <option value="pergola_electric">פרגולה חשמלית</option>
-                        <option value="pergola_fixed">פרגולה קבועה</option>
-                        <option value="pergola_standard">
-                          פרגולה סטנדרטית
-                        </option>
-                        <option value="pergola_glass">פרגולות זכוכית</option>
-                      </select>
-
-                      <!-- Arrow icon -->
-                      <svg
-                        class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </div>
-
-                    <!-- email -->
-                    <div>
-                      <label for="email" class="sr-only">אימייל</label>
-                      <input
-                        id="email"
-                        type="email"
-                        required
-                        placeholder="איימל *"
-                        class="w-full h-14 rounded-xl bg-background-light dark:bg-background-dark/50 border border-gray-200 dark:border-gray-700 px-4 text-gray-800 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0a2143]"
-                      />
-                    </div>
-
-                    <!-- message (span 2) -->
-                    <div class="sm:col-span-2">
-                      <label for="message" class="sr-only"
-                        >איך נוכל לעזור?</label
-                      >
-                      <textarea
-                        id="message"
-                        rows="5"
-                        required
-                        placeholder="איך נוכל לעזור? *"
-                        class="w-full rounded-xl bg-background-light dark:bg-background-dark/50 border border-gray-200 dark:border-gray-700 px-4 py-3 text-gray-800 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0a2143]"
-                      ></textarea>
-                    </div>
-                  </div>
-
-                  <!-- helper right / submit left -->
-                  <div class="flex items-center justify-between pt-2">
-                    <p class="text-xs text-gray-500 dark:text-gray-500">
-                      השדות המסומנים * הינם חובה.
-                    </p>
-                    <button
-                      type="submit"
-                      class="px-6 h-12 rounded-xl bg-[#0a2143] text-white font-bold hover:bg-[#0a2143]/90 transition-colors"
-                    >
-                      שליחה
-                    </button>
-                  </div>
-                </form>
-
-                <!-- Divider -->
-                <div
-                  class="my-8 border-t border-gray-200 dark:border-gray-800"
-                ></div>
-
-                <!-- Bento images (replace src with your photos) -->
-                <div
-                  class="grid grid-cols-2 md:grid-cols-4 auto-rows-[110px] md:auto-rows-[140px] gap-3"
-                >
-                  <img
-                    src="https://i.pinimg.com/1200x/bc/14/56/bc14561594ed2e932ba2a35303602059.jpg"
-                    alt="עבודת פרגולה"
-                    class="w-full h-full object-cover rounded-xl col-span-2 row-span-2"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1487438554865-619bd7b77db5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332"
-                    alt="סגירת חורף"
-                    class="w-full h-full object-cover rounded-xl"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1667585391452-65693a9c8ad0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1327"
-                    alt="גדר אלומיניום"
-                    class="w-full h-full object-cover rounded-xl"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1571909942400-db679662d913?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
-                    alt="פרגולת זכוכית"
-                    class="w-full h-full object-cover rounded-xl col-span-2"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <!-- Info -->
-            <aside class="lg:col-span-2 space-y-8">
-              <!-- Map / Google Embed -->
-              <div
-                class="rounded-2xl overflow-hidden shadow-soft border border-gray-200 dark:border-gray-800"
-              >
-              <iframe
-              width="600" height="450" style="border:0;" loading="lazy" allowfullscreen
-              data-cookie-category="functional"
-              data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13427.140186571867!2d35.05306789068038!3d32.71833912901059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dafeaf153cbe9%3A0x51eb9b8891c33f07!2sIsfiya!5e0!3m2!1sen!2sil!4v1761228201170!5m2!1sen!2sil"
-            ></iframe>
-              </div>
-
-              <div class="grid grid-cols-1 gap-6">
-                <div
-                  class="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-2xl p-6"
-                >
-                  <h3
-                    class="text-xl font-extrabold text-gray-900 dark:text-white mb-4"
+            <!-- Acceptable use -->
+            <section>
+              <h2 class="text-2xl font-bold text-primary dark:text-white mb-3">
+                שימוש מקובל
+              </h2>
+              <ul class="space-y-2 pr-5 text-gray-700 dark:text-gray-300">
+                <li class="flex gap-2 items-start">
+                  <span class="material-symbols-outlined text-accent mt-0.5"
+                    >check_circle</span
                   >
-                    פרטי קשר
-                  </h3>
-                  <ul class="space-y-3 text-gray-700 dark:text-gray-300">
-                    <li class="flex items-start gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                        class="w-5 h-5 text-[#0a2143] dark:text-[#92a5af] mt-1"
-                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                     <path stroke-linecap="round" stroke-linejoin="round"
-                           d="M12 21s8-6.58 8-11a8 8 0 1 0-16 0c0 4.42 8 11 8 11z" />
-                     <circle cx="12" cy="10" r="3" />
-                   </svg>
-                        <circle cx="9" cy="20" r="1"></circle>
-                        <circle cx="17" cy="20" r="1"></circle>
-                      </svg>
-                      <span>עוספיא</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg
-                        class="w-5 h-5 shrink-0 mt-0.5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2 6.18 2 2 0 0 1 4 4h3a2 2 0 0 1 2 1.72c.1.96.36 1.9.77 2.77a2 2 0 0 1-.45 2.11L8.09 11a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.87.41 1.81.67 2.77.77A2 2 0 0 1 22 16.92z"
-                        />
-                      </svg>
-                      <a
-                        class="hover:text-primary transition-colors"
-                        href="tel:0501234567"
-                        >053-3832323</a
-                      >
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg
-                        class="w-5 h-5 shrink-0 mt-0.5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"
-                        ></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                      </svg>
-                      <a
-                        class="hover:text-primary transition-colors break-words"
-                        href="mailto:contact@shadesolutions.co.il"
-                      >
-                        office@rhino-group.co.il</a
-                      >
-                    </li>
-                  </ul>
-
-                  <div class="mt-5 flex gap-3">
-                    <a
-                      href="https://wa.me/972533832323"
-                      class="flex-1 px-5 py-3 rounded-lg bg-green-500 text-white font-bold text-center hover:bg-green-600 transition-colors"
-                    >
-                      וואטסאפ
-                    </a>
-                    <a
-                      href="tel:0501234567"
-                      class="flex-1 px-5 py-3 rounded-lg bg-accent text-white font-bold text-center hover:bg-primary hover:text-accent transition-colors"
-                    >
-                      התקשרו
-                    </a>
-                  </div>
-                </div>
-
-                <div
-                  class="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-2xl p-6"
-                >
-                  <h3
-                    class="text-xl font-extrabold text-gray-900 dark:text-white mb-4"
+                  שימוש חוקי וסביר שאינו פוגע בצדדים שלישיים.
+                </li>
+                <li class="flex gap-2 items-start">
+                  <span class="material-symbols-outlined text-accent mt-0.5"
+                    >check_circle</span
                   >
-                    שעות פעילות
-                  </h3>
-                  <ul class="text-gray-700 dark:text-gray-300 space-y-1">
-                    <li>א׳–ה׳: 07:00–17:00</li>
-                    <li>ו׳-ש: סגור</li>
-                    
-                  </ul>
-                </div>
-              </div>
-            </aside>
+                  איסור על פרסום/העלאת תוכן בלתי חוקי, מעליב, משמיץ, פוגעני או
+                  מפר זכויות.
+                </li>
+                <li class="flex gap-2 items-start">
+                  <span class="material-symbols-outlined text-accent mt-0.5"
+                    >check_circle</span
+                  >
+                  איסור על ניסיונות חדירה, סריקות, איסוף אוטומטי או עקיפה של
+                  אמצעי אבטחה.
+                </li>
+              </ul>
+            </section>
+
+            <!-- Quotes / Pricing -->
+            <section>
+              <h2 class="text-2xl font-bold text-primary dark:text-white mb-3">
+                הצעות מחיר ומידע באתר
+              </h2>
+              <p class="text-gray-700 dark:text-gray-300">
+                מידע, תמונות ומחירים באתר עשויים להיות כלליים/אומדניים ואינם
+                מהווים הצעה מחייבת. הצעת מחיר סופית ניתנת רק לאחר סיור/מדידות
+                ואישור מפורט בכתב מטעם החברה.
+              </p>
+            </section>
+
+            <!-- Intellectual property -->
+            <section>
+              <h2 class="text-2xl font-bold text-primary dark:text-white mb-3">
+                קניין רוחני
+              </h2>
+              <p class="text-gray-700 dark:text-gray-300">
+                כל זכויות הקניין הרוחני באתר (טקסטים, עיצובים, תמונות, לוגו, קוד
+                וכיו"ב) הן של החברה או ברישיון מתאים. אין להעתיק, לשכפל, להפיץ,
+                לתרגם, ליצור יצירות נגזרות או לעשות שימוש מסחרי כלשהו ללא אישור
+                בכתב.
+              </p>
+            </section>
+
+            <!-- User submissions -->
+            <section>
+              <h2 class="text-2xl font-bold text-primary dark:text-white mb-3">
+                תכנים שמסרת
+              </h2>
+              <p class="text-gray-700 dark:text-gray-300">
+                מסירת פרטים דרך טפסים נעשית מרצונך. הנך מצהיר/ה שהמידע שמסרת
+                נכון ושאינך מפר זכויות צד ג’. שימוש במידע כפוף למדיניות הפרטיות
+                של החברה.
+              </p>
+            </section>
+
+            <!-- Third-party links -->
+            <section>
+              <h2 class="text-2xl font-bold text-primary dark:text-white mb-3">
+                קישורים לאתרים חיצוניים
+              </h2>
+              <p class="text-gray-700 dark:text-gray-300">
+                באתר עשויים להופיע קישורים לאתרים של צדדים שלישיים. החברה אינה
+                אחראית לתוכנם, למדיניותם או לפרטיותם, והשימוש בהם באחריות המשתמש
+                בלבד.
+              </p>
+            </section>
+
+            <!-- Warranty / Availability -->
+            <section>
+              <h2 class="text-2xl font-bold text-primary dark:text-white mb-3">
+                כתב ויתור על אחריות
+              </h2>
+              <p class="text-gray-700 dark:text-gray-300">
+                האתר מסופק “כמות שהוא”. החברה אינה מתחייבת שהאתר יהיה חף משגיאות
+                או זמין בכל עת. יתכנו שינויים, עדכונים והשבתות ללא הודעה מוקדמת.
+              </p>
+            </section>
+
+            <!-- Limitation of liability -->
+            <section>
+              <h2 class="text-2xl font-bold text-primary dark:text-white mb-3">
+                הגבלת אחריות
+              </h2>
+              <p class="text-gray-700 dark:text-gray-300">
+                החברה, מנהליה ועובדיה לא יהיו אחראים לכל נזק עקיף/תוצאתי/מיוחד
+                הנובע מהשימוש באתר או מאי היכולת להשתמש בו. בכל מקרה, אחריות
+                החברה – אם וככל שתוטל – תהיה מוגבלת עד לסכום ששולם בפועל בגין
+                שירות רלוונטי, אם שולם.
+              </p>
+            </section>
+
+            <!-- Indemnification -->
+            <section>
+              <h2 class="text-2xl font-bold text-primary dark:text-white mb-3">
+                שיפוי
+              </h2>
+              <p class="text-gray-700 dark:text-gray-300">
+                הנך מתחייב/ת לשפות את החברה בגין כל נזק, הוצאה או תביעה עקב הפרת
+                תנאים אלה או שימוש בלתי תקין באתר.
+              </p>
+            </section>
+
+            <!-- Changes -->
+            <section>
+              <h2 class="text-2xl font-bold text-primary dark:text-white mb-3">
+                שינויים בתנאים
+              </h2>
+              <p class="text-gray-700 dark:text-gray-300">
+                החברה רשאית לעדכן את התנאים מעת לעת. הגרסה העדכנית תפורסם באתר
+                ותיכנס לתוקף עם פרסומה.
+              </p>
+            </section>
+
+            <!-- Law -->
+            <section>
+              <h2 class="text-2xl font-bold text-primary dark:text-white mb-3">
+                דין וסמכות שיפוט
+              </h2>
+              <p class="text-gray-700 dark:text-gray-300">
+                על התנאים יחולו דיני מדינת ישראל בלבד. סמכות השיפוט הבלעדית
+                נתונה לבתי המשפט המוסמכים במחוז תל-אביב–יפו.
+              </p>
+            </section>
+
+            <!-- Contact -->
+            <section>
+              <h2 class="text-2xl font-bold text-primary dark:text-white mb-3">
+                יצירת קשר
+              </h2>
+              <p class="text-gray-700 dark:text-gray-300">
+                לכל שאלה בנושא תנאי השימוש ניתן לפנות אלינו בדוא"ל:
+                <a
+                  href="mailto:info@shadesolutions.co.il"
+                  class="font-semibold text-primary underline-offset-2 hover:underline dark:text-accent"
+                  >office@rhino-group.co.il</a
+                >
+                או בעמוד
+                <a href="./contact.html" class="underline underline-offset-2"
+                  >צור קשר</a
+                >.
+              </p>
+            </section>
           </div>
-        </div>
+        </section>
       </main>
 
-      <!-- FOOTER (same as other pages) -->
+      <!--- FOOTER --->
+
       <footer class="bg-primary text-white mt-auto">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -790,53 +695,48 @@
       </footer>
     
 
-    <!-- Scripts -->
-    <script>
-      // Mobile menu toggle (same behavior site-wide)
-      document.addEventListener("DOMContentLoaded", () => {
-        const btn = document.getElementById("mobileBtn");
-        const panel = document.getElementById("mobilePanel");
-        const icOpen = document.getElementById("mobileIconOpen");
-        const icClose = document.getElementById("mobileIconClose");
-        if (btn && panel) {
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          // Safe year update (only if #year exists)
+          const yearEl = document.getElementById("year");
+          if (yearEl) yearEl.textContent = new Date().getFullYear();
+      
+          // Mobile menu toggle
+          const btn = document.getElementById("mobileBtn");
+          const panel = document.getElementById("mobilePanel");
+          const icOpen = document.getElementById("mobileIconOpen");
+          const icClose = document.getElementById("mobileIconClose");
+          if (!btn || !panel) return;
+      
           const setOpen = (open) => {
             panel.classList.toggle("hidden", !open);
             btn.setAttribute("aria-expanded", String(open));
-            icOpen?.classList.toggle("hidden", open);
-            icClose?.classList.toggle("hidden", !open);
+            icOpen && icOpen.classList.toggle("hidden", open);
+            icClose && icClose.classList.toggle("hidden", !open);
             document.documentElement.classList.toggle("overflow-hidden", open);
           };
+      
           setOpen(false);
-          btn.addEventListener("click", () =>
-            setOpen(panel.classList.contains("hidden"))
-          );
-          document.addEventListener(
-            "keydown",
-            (e) => e.key === "Escape" && setOpen(false)
-          );
+      
+          btn.addEventListener("click", () => {
+            const willOpen = panel.classList.contains("hidden");
+            setOpen(willOpen);
+          });
+      
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") setOpen(false);
+          });
+      
           document.addEventListener("click", (e) => {
             if (!panel.classList.contains("hidden")) {
               const within = panel.contains(e.target) || btn.contains(e.target);
               if (!within) setOpen(false);
             }
           });
-        }
+        });
+      </script>
 
-        // Simple fake form handler (no backend) -> shows toast
-        const form = document.getElementById("contactForm");
-        const toast = document.getElementById("formToast");
-        if (form && toast) {
-          form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            toast.classList.remove("hidden");
-            form.reset();
-            setTimeout(() => toast.classList.add("hidden"), 4000);
-          });
-        }
-      });
-    </script>
-
-    <!-- Cookies Banner -->
+         <!-- Cookies Banner -->
 <div id="cookieBanner" dir="rtl"
 class="fixed inset-x-0 bottom-0 z-[60] bg-white/95 dark:bg-[#0b1420]/95 backdrop-blur border-t border-gray-200/60 dark:border-white/10 shadow-lg">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
