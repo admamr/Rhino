@@ -10,7 +10,6 @@ Responsive showcase website for **Rhino**, providing advanced shading solutions 
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Responsive Design](https://img.shields.io/badge/Responsive-Design-blue?style=flat)](#)
 [![RTL Support](https://img.shields.io/badge/RTL-Hebrew-lightgrey?style=flat)](#)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 </div>
 
