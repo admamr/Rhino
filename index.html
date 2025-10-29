@@ -465,10 +465,8 @@
                 class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white dark:bg-gray-800 motion-safe:animate-in"
               >
                 <div class="flex-shrink-0">
-                  <div
-  class="h-56 sm:h-64 w-full bg-top bg-cover rounded-xl shadow-md opacity-0 transition-opacity duration-700"
-  data-bg="./Assets/electric-per.jpg"
-></div>
+                  <div class="h-56 sm:h-64 w-full bg-top bg-cover rounded-xl shadow-md opacity-0 transition-opacity duration-700"
+     data-bg="./Assets/electric-per.jpg"></div>
                 </div>
                 <div class="flex flex-1 flex-col justify-between p-6">
                   <div class="flex-1">
@@ -504,10 +502,8 @@
                 style="animation-delay: 150ms"
               >
                 <div class="flex-shrink-0">
-                  <div
-  class="h-56 sm:h-64 w-full bg-center bg-cover rounded-xl shadow-md opacity-0 transition-opacity duration-700"
-  data-bg="./assets/zipped-screen.jpg"
-></div>
+                  <div class="h-56 sm:h-64 w-full bg-center bg-cover rounded-xl shadow-md opacity-0 transition-opacity duration-700"
+     data-bg="./Assets/zipped-screen.jpg"></div>
                 </div>
                 <div class="flex flex-1 flex-col justify-between p-6">
                   <div class="flex-1">
@@ -543,10 +539,8 @@
                 style="animation-delay: 300ms"
               >
                 <div class="flex-shrink-0">
-                  <div
-  class="h-56 sm:h-64 w-full bg-center bg-cover rounded-xl shadow-md opacity-0 transition-opacity duration-700"
-  data-bg="./assets/glassed.jpg"
-></div>
+                  <div class="h-56 sm:h-64 w-full bg-center bg-cover rounded-xl shadow-md opacity-0 transition-opacity duration-700"
+     data-bg="./Assets/glassed.jpg"></div>
                 </div>
                 <div class="flex flex-1 flex-col justify-between p-6">
                   <div class="flex-1">
@@ -1240,39 +1234,7 @@
         </div>
         
       </footer>
-    
-
-    <!-- tiny script for mobile menu -->
-    <script>
-      const btn = document.getElementById("mobileBtn");
-      const panel = document.getElementById("mobilePanel");
-      const icOpen = document.getElementById("mobileIconOpen");
-      const icClose = document.getElementById("mobileIconClose");
-      btn?.addEventListener("click", () => {
-        panel.classList.toggle("hidden");
-        icOpen.classList.toggle("hidden");
-        icClose.classList.toggle("hidden");
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-  const lazyBackgrounds = document.querySelectorAll("[data-bg]");
-  const io = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const bg = el.getAttribute("data-bg");
-        el.style.backgroundImage = `url('${bg}')`;
-        el.classList.remove("opacity-0"); // fade in
-        el.removeAttribute("data-bg");
-        observer.unobserve(el);
-      }
-    });
-  }, { rootMargin: "200px 0px" }); // preload before visible
-
-  lazyBackgrounds.forEach(el => io.observe(el));
-});
-    </script>
-
-    <!-- Cookies Banner -->
+       <!-- Cookies Banner -->
 <div id="cookieBanner" dir="rtl"
 class="fixed inset-x-0 bottom-0 z-[60] bg-white/95 dark:bg-[#0b1420]/95 backdrop-blur border-t border-gray-200/60 dark:border-white/10 shadow-lg">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -1353,8 +1315,38 @@ class="fixed inset-x-0 bottom-0 z-[60] bg-white/95 dark:bg-[#0b1420]/95 backdrop
 </div>
 </div>
 </div>
-
+    
 <script>
+  //tiny script for mobile menu
+
+  const btn = document.getElementById("mobileBtn");
+      const panel = document.getElementById("mobilePanel");
+      const icOpen = document.getElementById("mobileIconOpen");
+      const icClose = document.getElementById("mobileIconClose");
+      btn?.addEventListener("click", () => {
+        panel.classList.toggle("hidden");
+        icOpen.classList.toggle("hidden");
+        icClose.classList.toggle("hidden");
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+  const lazyBackgrounds = document.querySelectorAll("[data-bg]");
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const bg = el.getAttribute("data-bg");
+        el.style.backgroundImage = `url('${bg}')`;
+        el.classList.remove("opacity-0"); // fade in
+        el.removeAttribute("data-bg");
+        observer.unobserve(el);
+      }
+    });
+  }, { rootMargin: "200px 0px" }); // preload before visible
+
+  lazyBackgrounds.forEach(el => io.observe(el));
+});
+//end of mobile menu script
+
   (function() {
     const LS_KEY = 'cookieConsent.v1';
     const $ = (id) => document.getElementById(id);

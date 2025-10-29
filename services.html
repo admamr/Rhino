@@ -799,68 +799,6 @@ class="mt-10 bg-[#0a2143] text-white rounded-2xl shadow-lg px-6 py-8 md:px-10 md
           </div>
         </div>
       </footer>
-    
-
-    <!-- Mobile menu toggle (same as homepage) -->
-    <script>
-      const btn = document.getElementById("mobileBtn");
-      const panel = document.getElementById("mobilePanel");
-      const icOpen = document.getElementById("mobileIconOpen");
-      const icClose = document.getElementById("mobileIconClose");
-      btn?.addEventListener("click", () => {
-        panel.classList.toggle("hidden");
-        icOpen.classList.toggle("hidden");
-        icClose.classList.toggle("hidden");
-      });
-    </script>
-
-    <!-- Simple filtering logic // FILTERING -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const buttons = Array.from(document.querySelectorAll("[data-filter]"));
-        const cards = Array.from(document.querySelectorAll("[data-category]"));
-
-        // Match your existing visual styles:
-        const ACTIVE_ON = ["bg-primary", "text-white", "font-bold"];
-        const ACTIVE_OFF = ["bg-white", "text-gray-800", "font-semibold"];
-
-        function setActiveButton(btn) {
-          buttons.forEach((b) => {
-            b.classList.remove(...ACTIVE_ON);
-            ACTIVE_OFF.forEach((c) => {
-              if (!b.classList.contains(c)) b.classList.add(c);
-            });
-          });
-          btn.classList.remove(...ACTIVE_OFF);
-          btn.classList.add(...ACTIVE_ON);
-        }
-
-        function applyFilter(filter) {
-          cards.forEach((card) => {
-            const list = card.dataset.category.split(",").map((s) => s.trim());
-            const show = filter === "הכל" || list.includes(filter);
-            card.classList.toggle("hidden", !show);
-          });
-        }
-
-        // Init — default to "הכל"
-        const defaultBtn =
-          buttons.find((b) => b.dataset.filter === "הכל") || buttons[0];
-        if (defaultBtn) {
-          setActiveButton(defaultBtn);
-          applyFilter(defaultBtn.dataset.filter);
-        }
-
-        // Click handlers
-        buttons.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            setActiveButton(btn);
-            applyFilter(btn.dataset.filter);
-          });
-        });
-      });
-    </script>
-
       <!-- Cookies Banner -->
 <div id="cookieBanner" dir="rtl"
 class="fixed inset-x-0 bottom-0 z-[60] bg-white/95 dark:bg-[#0b1420]/95 backdrop-blur border-t border-gray-200/60 dark:border-white/10 shadow-lg">
@@ -942,6 +880,69 @@ class="fixed inset-x-0 bottom-0 z-[60] bg-white/95 dark:bg-[#0b1420]/95 backdrop
 </div>
 </div>
 </div>
+    
+
+    <!-- Mobile menu toggle (same as homepage) -->
+    <script>
+      const btn = document.getElementById("mobileBtn");
+      const panel = document.getElementById("mobilePanel");
+      const icOpen = document.getElementById("mobileIconOpen");
+      const icClose = document.getElementById("mobileIconClose");
+      btn?.addEventListener("click", () => {
+        panel.classList.toggle("hidden");
+        icOpen.classList.toggle("hidden");
+        icClose.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Simple filtering logic // FILTERING -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = Array.from(document.querySelectorAll("[data-filter]"));
+        const cards = Array.from(document.querySelectorAll("[data-category]"));
+
+        // Match your existing visual styles:
+        const ACTIVE_ON = ["bg-primary", "text-white", "font-bold"];
+        const ACTIVE_OFF = ["bg-white", "text-gray-800", "font-semibold"];
+
+        function setActiveButton(btn) {
+          buttons.forEach((b) => {
+            b.classList.remove(...ACTIVE_ON);
+            ACTIVE_OFF.forEach((c) => {
+              if (!b.classList.contains(c)) b.classList.add(c);
+            });
+          });
+          btn.classList.remove(...ACTIVE_OFF);
+          btn.classList.add(...ACTIVE_ON);
+        }
+
+        function applyFilter(filter) {
+          cards.forEach((card) => {
+            const list = card.dataset.category.split(",").map((s) => s.trim());
+            const show = filter === "הכל" || list.includes(filter);
+            card.classList.toggle("hidden", !show);
+          });
+        }
+
+        // Init — default to "הכל"
+        const defaultBtn =
+          buttons.find((b) => b.dataset.filter === "הכל") || buttons[0];
+        if (defaultBtn) {
+          setActiveButton(defaultBtn);
+          applyFilter(defaultBtn.dataset.filter);
+        }
+
+        // Click handlers
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            setActiveButton(btn);
+            applyFilter(btn.dataset.filter);
+          });
+        });
+      });
+    </script>
+
+      
 
 <script>
   (function() {
