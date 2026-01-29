@@ -1,1074 +1,652 @@
+<!-- contact.html -->
 <!DOCTYPE html>
 <html dir="rtl" lang="he">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>צור קשר – ריינו סוככים</title>
-    <link href="./Assets/Logo - RHINO .png" rel="icon" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>צור קשר, ריינו סוככים | הצעת מחיר מהירה</title>
+    <meta
+      name="description"
+      content="צור קשר לקבלת הצעת מחיר מהירה לפרגולות, סגירות, גדרות ושערים, מסכי ZIP. וואטסאפ, טלפון, אימייל, ומפת הגעה לעוספיא."
+    />
+    <link rel="canonical" href="https://rhino-awnings.com/contact.html" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="icon" href="./Assets/Logo - RHINO .png" type="image/x-icon" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ריינו סוככים" />
+    <meta property="og:title" content="צור קשר, ריינו סוככים" />
+    <meta
+      property="og:description"
+      content="השאירו פרטים או דברו איתנו ב WhatsApp, הצעת מחיר מהירה, מפת הגעה לעוספיא."
+    />
+    <meta property="og:url" content="https://rhino-awnings.com/contact.html" />
+    <meta
+      property="og:image"
+      content="https://rhino-awnings.com/Assets/og-cover.jpg"
+    />
+
+    <!-- Fonts -->
+    <link crossorigin href="https://fonts.gstatic.com/" rel="preconnect" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope:wght@400;600;700;800&amp;family=Noto+Sans+Hebrew:wght@400;500;700;900"
+      onload="this.rel='stylesheet'"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Zen+Dots&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#0a2143",
-              accent: "#92a5af",
-              "background-light": "#f6f7f8",
-              "background-dark": "#111821",
-            },
-            fontFamily: {
-              display: ["Manrope", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.5rem",
-              lg: "1rem",
-              xl: "1.5rem",
-              full: "9999px",
-            },
-            boxShadow: {
-              soft: "0 10px 20px rgba(0,0,0,.06)",
-            },
-          },
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- LocalBusiness JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ריינו סוככים",
+        "url": "https://rhino-awnings.com/",
+        "image": "https://rhino-awnings.com/Assets/Logo%20-%20RHINO%20.png",
+        "telephone": "+972-53-383-2323",
+        "email": "office@rhino-group.co.il",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "עוספיא",
+          "addressCountry": "IL"
         },
-      };
+        "areaServed": { "@type": "Country", "name": "Israel" },
+        "sameAs": [
+          "https://www.facebook.com/rhino.Awnings",
+          "https://www.instagram.com/rhino.awnings/"
+        ]
+      }
     </script>
-    <style>
-      body {
-        font-family: "Manrope", sans-serif;
-      }
-      [x-cloak] {
-        display: none !important;
-      }
-      select {
-        background-position: left 1rem center; /* push arrow inward */
-        padding-left: 2.5rem; /* room for arrow */
-        direction: rtl; /* keep text RTL */
-      }
-      .credit {
-        font-family: "Orbitron", sans-serif;
-        font-size: 0.7rem;
-        font-weight: bold;
-      }
-
-      .credit a {
-        font-family: "Zen Dots", cursive;
-        font-size: 0.7rem;
-        font-weight: bold;
-        text-decoration: none;
-        color: #eeeeee;
-        text-decoration: none;
-      }
-
-      .credit a:hover {
-        color: #8E1616;
-        text-decoration: none;
-      }
-    </style>
   </head>
 
-  <body
-    class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200"
-  >
-    <div class="flex flex-col min-h-screen">
-      <!-- HEADER (same as other pages) -->
-      <header class="sticky top-0 z-50 bg-[#0a2143]">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            class="flex items-center justify-between h-20 border-b border-white/10"
+  <body class="site-body">
+    <!-- HEADER -->
+    <header class="site-header" id="top">
+      <div class="header-desktop">
+        <div class="topbar">
+          <nav class="top-links" aria-label="תפריט עליון">
+            <a href="index.html">דף הבית</a>
+            <a href="about-us.html">אודות</a>
+            <a href="projects.html">פרויקטים</a>
+            <a class="is-active" href="contact.html">צרו קשר</a>
+          </nav>
+
+          <a
+            class="phone-chip"
+            href="tel:+972533832323"
+            aria-label="התקשרו אלינו"
           >
-            <!-- Logo -->
-            <div class="flex items-center gap-4">
-              <div
-                class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shrink-0"
-              >
-                <a href="./index.html" aria-label="דף הבית">
-                  <img
-                    class="max-h-12 sm:max-h-14 w-auto"
-                    src="./Assets/Logo - RHINO .png"
-                    alt="Rhino Shades Logo"
-                  />
-                </a>
-              </div>
-            </div>
+            <span class="phone-chip__label">לפגישת ייעוץ ללא התחייבות</span>
+            <span class="phone-chip__number">053-3832323</span>
+          </a>
+        </div>
 
-            <!-- Desktop nav -->
-            <nav
-              class="hidden lg:flex items-center gap-x-8 text-base font-medium"
-            >
-              <a
-                class="text-white hover:text-accent transition-colors"
-                href="./index.html"
-                >דף הבית</a
-              >
-              <div class="relative group">
-                <a
-                  href="./services.html"
-                  class="text-white hover:text-accent transition-colors flex items-center gap-1"
-                >
-                  <span>שירותים</span>
-                  <svg
-                    class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 9l-7 7-7-7"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    ></path>
-                  </svg>
-                </a>
-                <div
-                  class="absolute right-0 top-full bg-white shadow-lg rounded-lg py-2 w-48 invisible opacity-0 translate-y-2 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0"
-                >
-                  <a
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary"
-                    href="./pergolas.html"
-                    >פרגולות</a
-                  >
-                  <a
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary"
-                    href="./fences.html"
-                    >גדרות אלומיניום</a
-                  >
-                  <a
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary"
-                    href="./enclosures.html"
-                    >סגירות חורף</a
-                  >
-                </div>
-              </div>
-              <a
-                class="text-white hover:text-accent transition-colors"
-                href="./projects.html"
-                >פרויקטים</a
-              >
-              <a
-                class="text-white hover:text-accent transition-colors"
-                href="./about-us.html"
-                >אודות</a
-              >
-              
-            </nav>
+        <div class="mainbar">
+          <a class="brand" href="index.html" aria-label="דף הבית">
+            <img
+              src="Assets/white-logo.png"
+              alt="ריינו סוככים"
+              width="140"
+              height="44"
+            />
+          </a>
 
-            <!-- Desktop actions -->
-            <div class="hidden lg:flex items-center gap-x-4">
-              <a
-                href="./contact.html"
-                class="px-5 py-3 rounded-lg bg-accent text-white text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black"
-              >
-               יצירת קשר </a>
-               <a
-               href="https://wa.me/972533832323"
-               class="p-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
-               aria-label="WhatsApp"
-             >
-               <svg
-                 viewBox="0 0 24 24"
-                 class="w-5 h-5 text-white"
-                 fill="currentColor"
-                 aria-hidden="true"
-               >
-                 <path
-                   d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 3.48 8.52L2 24l3.6-1.44A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52ZM12 21.82c-1.94 0-3.74-.57-5.26-1.56l-.38-.24-2.14.86.82-2.08-.25-.4A9.81 9.81 0 0 1 2.18 12C2.18 6.56 6.56 2.18 12 2.18S21.82 6.56 21.82 12 17.44 21.82 12 21.82Zm5.02-6.46c-.28-.14-1.67-.83-1.93-.92-.26-.1-.45-.14-.64.14-.19.28-.74.92-.9 1.11-.17.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.37-.82-.72-1.37-1.6-1.53-1.88-.16-.28-.02-.44.12-.58.12-.12.28-.33.43-.5.14-.17.19-.28.29-.47.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.1-.23-.55-.46-.47-.64-.48l-.55-.01c-.19 0-.5.07-.76.36s-.99.97-.99 2.35 1.02 2.73 1.17 2.92c.14.19 2 3.05 4.84 4.27.68.29 1.2.46 1.61.59.68.22 1.3.19 1.79.11.55-.08 1.67-.68 1.9-1.33.23-.64.23-1.21.16-1.33-.07-.12-.26-.19-.54-.33Z"
-                 />
-               </svg>
-             </a>
-            </div>
-
-            <!-- Hamburger -->
+          <nav class="mega" aria-label="תפריט ראשי">
             <button
-              id="mobileBtn"
-              class="lg:hidden inline-flex items-center justify-center p-3 rounded-lg border border-white/20 text-white"
-              aria-label="תפריט"
-              aria-controls="mobilePanel"
+              class="mega__item"
+              type="button"
+              aria-haspopup="true"
               aria-expanded="false"
+              data-mega="pergolas"
             >
-              <svg
-                id="mobileIconOpen"
-                class="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
+              <span class="mega__icon" aria-hidden="true">
+                <img
+                  src="Assets/icons/Pergola.png"
+                  alt=""
+                  width="100"
+                  height="100"
                 />
-              </svg>
-              <svg
-                id="mobileIconClose"
-                class="h-6 w-6 hidden"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              </span>
+              <span class="mega__text">פרגולות</span>
             </button>
+
+            <button
+              class="mega__item"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-mega="closures"
+            >
+              <span class="mega__icon" aria-hidden="true">
+                <img
+                  src="Assets/icons/clouser.png"
+                  alt=""
+                  width="100"
+                  height="100"
+                />
+              </span>
+              <span class="mega__text">סגירות</span>
+            </button>
+
+            <button
+              class="mega__item"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-mega="zip"
+            >
+              <span class="mega__icon" aria-hidden="true">
+                <img src="Assets/icons/zip.png" alt="" width="40" height="40" />
+              </span>
+              <span class="mega__text">מסכי ZIP</span>
+            </button>
+
+            <button
+              class="mega__item"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-mega="fences"
+            >
+              <span class="mega__icon" aria-hidden="true">
+                <img
+                  src="Assets/icons/gate.png"
+                  alt=""
+                  width="40"
+                  height="40"
+                />
+              </span>
+              <span class="mega__text">גדרות ושערים</span>
+            </button>
+
+            <a class="mega__link" href="services.html">כל השירותים</a>
+          </nav>
+
+          <div class="actions">
+            <a class="btn btn--ghost" href="index.html#projects"
+              >עבודות נבחרות</a
+            >
+            <a class="btn btn--primary" href="contact.html">קבלת הצעת מחיר</a>
           </div>
+        </div>
 
-          <!-- Mobile nav -->
-          <div
-            id="mobilePanel"
-            class="lg:hidden hidden border-b border-white/10 bg-[#0a2143]"
-          >
-            <div class="px-4 sm:px-6 lg:px-8 py-4 space-y-4">
-              <a
-                class="block text-white hover:text-accent transition-colors"
-                href="./index.html"
-                >דף הבית</a
-              >
-              <details class="block">
-                <summary
-                  class="cursor-pointer text-white hover:text-accent transition-colors"
-                >
-                  שירותים
-                </summary>
-                <div class="mt-2 ps-4 space-y-2">
-                  <a
-                    class="block text-white/90 hover:text-accent transition-colors"
-                    href="./pergolas.html"
-                    >פרגולות</a
-                  >
-                  <a
-                    class="block text-white/90 hover:text-accent transition-colors"
-                    href="./fences.html"
-                    >גדרות אלומיניום</a
-                  >
-                  <a
-                    class="block text-white/90 hover:text-accent transition-colors"
-                    href="./enclosures.html"
-                    >סגירות חורף</a
-                  >
-                </div>
-              </details>
-              <a
-                class="block text-white hover:text-accent transition-colors"
-                href="./projects.html"
-                >פרויקטים</a
-              >
-              <a
-                class="block text-white hover:text-accent transition-colors"
-                href="./about-us.html"
-                >אודות</a
-              >
-              
+        <div class="mega-panel" id="megaPanel" hidden>
+          <div class="mega-panel__inner" role="dialog" aria-label="תפריט מגה">
+            <div class="mega-panel__col mega-panel__menu">
+              <h3 class="mega-panel__title" id="megaTitle">כותרת</h3>
+              <ul class="mega-panel__list" id="megaList"></ul>
+            </div>
 
-              <div class="pt-2 flex gap-2">
-                <button
-                  class="flex-1 px-5 py-3 rounded-lg bg-[#92a5af] text-[#0a2143] text-base font-bold border border-transparent transition-colors hover:bg-white hover:text-black"
-                >
-                  <a href="./contact.html"> יצירת קשר</a>
-                </button>
-                <a
-                href="https://wa.me/972533832323"
-                class="p-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
-                aria-label="WhatsApp"
+            <div class="mega-panel__col mega-panel__banners">
+              <a
+                class="banner"
+                id="megaBanner1"
+                href="index.html#projects"
+                aria-label="באנר 1"
               >
-                <svg
-                  viewBox="0 0 24 24"
-                  class="w-5 h-5 text-white"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 3.48 8.52L2 24l3.6-1.44A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52ZM12 21.82c-1.94 0-3.74-.57-5.26-1.56l-.38-.24-2.14.86.82-2.08-.25-.4A9.81 9.81 0 0 1 2.18 12C2.18 6.56 6.56 2.18 12 2.18S21.82 6.56 21.82 12 17.44 21.82 12 21.82Zm5.02-6.46c-.28-.14-1.67-.83-1.93-.92-.26-.1-.45-.14-.64.14-.19.28-.74.92-.9 1.11-.17.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.37-.82-.72-1.37-1.6-1.53-1.88-.16-.28-.02-.44.12-.58.12-.12.28-.33.43-.5.14-.17.19-.28.29-.47.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.1-.23-.55-.46-.47-.64-.48l-.55-.01c-.19 0-.5.07-.76.36s-.99.97-.99 2.35 1.02 2.73 1.17 2.92c.14.19 2 3.05 4.84 4.27.68.29 1.2.46 1.61.59.68.22 1.3.19 1.79.11.55-.08 1.67-.68 1.9-1.33.23-.64.23-1.21.16-1.33-.07-.12-.26-.19-.54-.33Z"
-                  />
-                </svg>
+                <img
+                  id="megaBannerImg1"
+                  src=""
+                  alt=""
+                  width="560"
+                  height="400"
+                />
               </a>
+
+              <a
+                class="banner"
+                id="megaBanner2"
+                href="contact.html"
+                aria-label="באנר 2"
+              >
+                <img
+                  id="megaBannerImg2"
+                  src=""
+                  alt=""
+                  width="540"
+                  height="360"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-mobile">
+        <a class="brand" href="index.html" aria-label="דף הבית">
+          <img
+            src="Assets/white-logo.png"
+            alt="ריינו סוככים"
+            width="80"
+            height="40"
+          />
+        </a>
+
+        <div class="m-actions">
+          <a class="m-phone" href="tel:+972533832323" aria-label="התקשרו אלינו">
+            <img
+              src="Assets/icons/Whatsapp.png"
+              alt=""
+              width="22"
+              height="22"
+            />
+          </a>
+
+          <button
+            class="burger"
+            type="button"
+            aria-label="פתח או סגור תפריט"
+            aria-expanded="false"
+            aria-controls="mobileDrawer"
+          >
+            <span class="burger__lines" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="drawer" id="mobileDrawer" hidden>
+          <div class="drawer__overlay" data-close-drawer></div>
+
+          <nav class="drawer__panel" aria-label="תפריט מובייל">
+            <div class="drawer__top">
+              <span class="drawer__title">תפריט</span>
+              <button
+                class="drawer__close"
+                type="button"
+                aria-label="סגור תפריט"
+                data-close-drawer
+              >
+                ✕
+              </button>
+            </div>
+
+            <div class="drawer__cta">
+              <a class="btn btn--primary btn--full" href="contact.html"
+                >קבלת הצעת מחיר</a
+              >
+            </div>
+
+            <div class="accordion">
+              <button
+                class="acc__head"
+                type="button"
+                aria-expanded="false"
+                data-acc="pergolas"
+              >
+                <span>פרגולות</span
+                ><span class="acc__chev" aria-hidden="true">⌄</span>
+              </button>
+              <div class="acc__body" hidden>
+                <a href="index.html#services">פרגולות קבועות</a>
+                <a href="index.html#services">רפפות חשמליות</a>
+                <a href="index.html#services">נאספות חשמליות</a>
+              </div>
+
+              <button
+                class="acc__head"
+                type="button"
+                aria-expanded="false"
+                data-acc="closures"
+              >
+                <span>סגירות</span
+                ><span class="acc__chev" aria-hidden="true">⌄</span>
+              </button>
+              <div class="acc__body" hidden>
+                <a href="index.html#services">סגירות זכוכית</a>
+                <a href="index.html#services">סגירת מרפסות</a>
+                <a href="index.html#services">סגירת חורף</a>
+              </div>
+
+              <button
+                class="acc__head"
+                type="button"
+                aria-expanded="false"
+                data-acc="zip"
+              >
+                <span>מסכי ZIP</span
+                ><span class="acc__chev" aria-hidden="true">⌄</span>
+              </button>
+              <div class="acc__body" hidden>
+                <a href="index.html#services">מסך ZIP</a>
+                <a href="index.html#services">מסכי גלילה</a>
+              </div>
+
+              <button
+                class="acc__head"
+                type="button"
+                aria-expanded="false"
+                data-acc="fences"
+              >
+                <span>גדרות ושערים</span
+                ><span class="acc__chev" aria-hidden="true">⌄</span>
+              </button>
+              <div class="acc__body" hidden>
+                <a href="index.html#services">גדרות אלומיניום</a>
+                <a href="index.html#services">שערים חשמליים</a>
+                <a href="index.html#services">שערי חניה</a>
+              </div>
+            </div>
+
+            <div class="drawer__links">
+              <a href="index.html">דף הבית</a>
+              <a href="about-us.html">אודות</a>
+              <a href="services.html">השירותים שלנו</a>
+              <a href="projects.html" aria-current="page">פרויקטים</a>
+              <a class="is-active" href="contact.html">צור קשר</a>
+            </div>
+
+            <div class="drawer__footer">
+              <a class="btn btn--ghost btn--full" href="tel:+972533832323"
+                >חייגו עכשיו</a
+              >
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="contact-page">
+      <!-- 1, Top header area -->
+      <section class="contact-hero" aria-labelledby="contactTitle">
+        <div class="container">
+          <div class="contact-hero__inner">
+            <div class="contact-hero__copy">
+              <p class="contact-hero__kicker">צור קשר</p>
+              <h1 id="contactTitle" class="contact-hero__title">
+                דברו איתנו, ונחזור אליכם מהר
+              </h1>
+              <p class="contact-hero__sub">
+                לקבלת ייעוץ והצעת מחיר, בחרו דרך יצירת קשר מועדפת או השאירו
+                פרטים בטופס.
+              </p>
+            </div>
+
+            <!-- 2, Primary actions -->
+            <div class="contact-actions" aria-label="דרכי יצירת קשר">
+              <a
+                class="contact-actions__primary"
+                href="https://wa.me/972533832323"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="contact-actions__primaryLabel">WhatsApp</span>
+                <span class="contact-actions__primaryText"
+                  >שלחו הודעה עכשיו</span
+                >
+              </a>
+
+              <div class="contact-actions__secondary">
+                <a
+                  class="contact-chip"
+                  href="tel:+972533832323"
+                  aria-label="התקשרו לטלפון 053-3832323"
+                >
+                  <span class="contact-chip__label">טלפון</span>
+                  <span class="contact-chip__value">053-3832323</span>
+                </a>
+
+                <a
+                  class="contact-chip"
+                  href="mailto:office@rhino-group.co.il"
+                  aria-label="שלחו מייל"
+                >
+                  <span class="contact-chip__label">אימייל</span>
+                  <span class="contact-chip__value"
+                    >office@rhino-group.co.il</span
+                  >
+                </a>
+
+                <div class="contact-chip is-muted" aria-label="מיקום">
+                  <span class="contact-chip__label">מיקום</span>
+                  <span class="contact-chip__value">עוספיא</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
-      <!-- MAIN -->
-      <main class="flex-grow container mx-auto px-6 py-16 md:py-24">
-        <div class="max-w-7xl mx-auto">
-          <!-- Title -->
-          <div class="flex flex-col items-start gap-4 mb-10">
-            <h1
-              class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
-            >
-              צור קשר
-            </h1>
-            <p class="text-gray-600 dark:text-gray-400 md:max-w-2xl">
-              יש לכם שאלה או רוצים להתחיל פרויקט? השאירו פרטים ונחזור אליכם עם
-              ייעוץ והצעת מחיר מותאמת.
+      <!-- 3, Form -->
+      <section class="contact-formSection" aria-labelledby="formTitle">
+        <div class="container">
+          <div class="contact-card">
+            <div class="contact-card__head">
+              <h2 id="formTitle" class="contact-card__title">השאירו פרטים</h2>
+              <p class="contact-card__sub">
+                ממלאים, שולחים, ואנחנו חוזרים אליכם בהקדם.
+              </p>
+            </div>
+
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="contact-form__grid">
+                <label class="field">
+                  <span class="field__label">שם מלא</span>
+                  <input
+                    class="field__input"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    required
+                  />
+                </label>
+
+                <label class="field">
+                  <span class="field__label">טלפון</span>
+                  <input
+                    class="field__input"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    required
+                  />
+                </label>
+
+                <div class="field">
+                  <span class="field__label">אימייל</span>
+                  <input
+                    class="field__input"
+                    id="email"
+                    name="email"
+                    type="email"
+                    inputmode="email"
+                    autocomplete="email"
+                    placeholder="name@email.com"
+                  />
+                </div>
+                <div class="field">
+                  <span class="field__label">אזור בארץ</span>
+                  <select
+                    class="field__input"
+                    id="location"
+                    name="location"
+                    required
+                  >
+                    <option value="" selected disabled>בחרו אזור</option>
+                    <option value="צפון">צפון</option>
+                    <option value="חיפה והקריות">חיפה והקריות</option>
+                    <option value="שרון">שרון</option>
+                    <option value="מרכז">מרכז</option>
+                    <option value="תל אביב והסביבה">תל אביב והסביבה</option>
+                    <option value="שפלה">שפלה</option>
+                    <option value="ירושלים והסביבה">ירושלים והסביבה</option>
+                    <option value="דרום">דרום</option>
+                    <option value="אחר">אחר</option>
+                  </select>
+                </div>
+
+                <label class="field field--full">
+                  <span class="field__label">שירות</span>
+                  <select class="field__input" name="service" required>
+                    <option value="" selected disabled>בחרו שירות</option>
+                    <option value="פרגולות">פרגולות</option>
+                    <option value="מסכי ZIP">מסכי ZIP</option>
+                    <option value="גדרות ושערים">גדרות ושערים</option>
+                    <option value="סגירות">סגירות</option>
+                    <option value="אחר">אחר</option>
+                  </select>
+                </label>
+
+                <label class="field field--full">
+                  <span class="field__label">הודעה</span>
+                  <textarea
+                    class="field__input field__textarea"
+                    name="message"
+                    rows="5"
+                    placeholder="תיאור קצר של מה שאתם צריכים"
+                  ></textarea>
+                </label>
+              </div>
+
+              <div class="contact-form__footer">
+                <button class="contact-submit" type="submit">שליחה</button>
+                <p
+                  id="contactStatus"
+                  class="contact-status"
+                  aria-live="polite"
+                ></p>
+                <p class="form-note">נחזור אליכם בהקדם האפשרי</p>
+              </div>
+            </form>
+
+            <div class="contact-card__media" aria-hidden="true">
+              <img
+                src="Assets/regular-pergola2.jpg"
+                alt="פתרונות הצללה וסוככים בהתאמה אישית"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4, Map -->
+      <section class="contact-mapSection" aria-labelledby="mapTitle">
+        <div class="container">
+          <div class="contact-mapCard">
+            <div class="contact-mapCard__head">
+              <h2 id="mapTitle" class="contact-mapCard__title">איך מגיעים</h2>
+              <p class="contact-mapCard__sub">
+                עוספיא, אפשר לפתוח ניווט ישירות בגוגל מפות.
+              </p>
+            </div>
+
+            <div class="contact-map">
+              <!-- Replace src with your exact Google Maps embed -->
+              <iframe
+                title="מפת משרד ריינו סוככים"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Isfiya&output=embed"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class="contact-mapCard__footer">
+              <a
+                class="contact-mapLink"
+                target="_blank"
+                rel="noopener"
+                href="https://www.google.com/maps/search/?api=1&query=Isfiya"
+              >
+                פתחו ב Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" aria-label="פוטר">
+      <div class="container footer__inner">
+        <div class="footer__grid">
+          <div class="footer__col footer__brand">
+            <a class="footer__logo" href="index.html" aria-label="דף הבית">
+              <img
+                src="Assets/white-logo.png"
+                alt="ריינו סוככים"
+                width="140"
+                height="44"
+              />
+            </a>
+            <p class="footer__desc">
+              פתרונות הצללה וגידור בהתאמה אישית, פרגולות, סגירות זכוכית, מסכי
+              ZIP, גדרות ושערים
             </p>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
-            <!-- Form card -->
-            <div class="lg:col-span-3">
-              <div
-                class="rounded-2xl bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-800 shadow-premium-lg p-6 md:p-8"
-              >
-                <!-- Title + sub -->
-                <h2 class="text-3xl font-bold text-primary mb-3">השאירו פרטים ונחזור אליכם</h2>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">
-                  מלאו את הטופס וניצור אתכם קשר לייעוץ אישי והצעת מחיר מותאמת לצרכים שלכם.
-                  </p>
-
-                <!-- Form -->
-                <form class="space-y-6">
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                 
-
-                    <!-- name -->
-                    <div>
-                      <label for="name" class="sr-only">שם מלא</label>
-                      <input
-                        id="name"
-                        type="text"
-                        required
-                        placeholder="שם מלא *"
-                        class="w-full h-14 rounded-xl bg-background-light dark:bg-background-dark/50 border border-gray-200 dark:border-gray-700 px-4 text-gray-800 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0a2143]"
-                      />
-                    </div>
-
-                    <!-- phone -->
-                    <div>
-                      <label for="phone" class="sr-only">טלפון</label>
-                      <input
-  id="phone"
-  type="tel"
-  required
-  dir="rtl"
-  placeholder="טלפון *"
-  class="w-full h-14 rounded-xl bg-background-light dark:bg-background-dark/50 border border-gray-200 dark:border-gray-700 px-4 text-right text-gray-800 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0a2143]"
-/>
-                    </div>
-   
-                    <!-- reason -->
-                    <div class="relative">
-                      <select
-                        id="service"
-                        class="w-full h-14 rounded-xl bg-background-light dark:bg-background-dark/50 border border-gray-200 dark:border-gray-700 px-4 pr-10 text-gray-800 dark:text-gray-100 appearance-none focus:outline-none focus:ring-2 focus:ring-[#0a2143]"
-                      >
-                        <option selected disabled>פניה בקשר ל-</option>
-                        <option value="pergola_electric">פרגולה חשמלית</option>
-                        <option value="pergola_fixed">פרגולה קבועה</option>
-                        <option value="pergola_standard">
-                          פרגולה סטנדרטית
-                        </option>
-                        <option value="pergola_glass">פרגולות זכוכית</option>
-                      </select>
-
-                      <!-- Arrow icon -->
-                      <svg
-                        class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </div>
-
-                    <!-- email -->
-                    <div>
-                      <label for="email" class="sr-only">אימייל</label>
-                      <input
-                        id="email"
-                        type="email"
-                        required
-                        placeholder="איימל *"
-                        class="w-full h-14 rounded-xl bg-background-light dark:bg-background-dark/50 border border-gray-200 dark:border-gray-700 px-4 text-gray-800 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0a2143]"
-                      />
-                    </div>
-
-                    <!-- message (span 2) -->
-                    <div class="sm:col-span-2">
-                      <label for="message" class="sr-only"
-                        >איך נוכל לעזור?</label
-                      >
-                      <textarea
-                        id="message"
-                        rows="5"
-                        placeholder="איך נוכל לעזור? "
-                        class="w-full rounded-xl bg-background-light dark:bg-background-dark/50 border border-gray-200 dark:border-gray-700 px-4 py-3 text-gray-800 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0a2143]"
-                      ></textarea>
-                    </div>
-                  </div>
-
-                  <!-- helper right / submit left -->
-                  <div class="flex items-center justify-between pt-2">
-                    <p class="text-xs text-gray-500 dark:text-gray-500">
-                      השדות המסומנים * הינם חובה.
-                    </p>
-                    <button
-                      type="submit"
-                      class="px-6 h-12 rounded-xl bg-[#0a2143] text-white font-bold hover:bg-[#0a2143]/90 transition-colors"
-                    >
-                      שליחה
-                    </button>
-                  </div>
-                </form>
-
-                <!-- Divider -->
-                <div
-                  class="my-8 border-t border-gray-200 dark:border-gray-800"
-                ></div>
-
-                <!-- Bento images (replace src with your photos) -->
-                <div
-                  class="grid grid-cols-2 md:grid-cols-4 auto-rows-[110px] md:auto-rows-[140px] gap-3"
-                >
-                  <img
-                    src="https://i.pinimg.com/1200x/bc/14/56/bc14561594ed2e932ba2a35303602059.jpg"
-                    alt="עבודת פרגולה"
-                    class="w-full h-full object-cover rounded-xl col-span-2 row-span-2"
-                  />
-                  <img
-                    src="./Assets/patio-perg.jpg"
-                    alt="סגירת חורף"
-                    class="w-full h-full object-cover rounded-xl"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1667585391452-65693a9c8ad0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1327"
-                    alt="גדר אלומיניום"
-                    class="w-full h-full object-cover rounded-xl"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1571909942400-db679662d913?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
-                    alt="פרגולת זכוכית"
-                    class="w-full h-full object-cover rounded-xl col-span-2"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <!-- Info -->
-            <aside class="lg:col-span-2 space-y-8">
-              <!-- Map / Google Embed -->
-              <div
-                class="rounded-2xl overflow-hidden shadow-soft border border-gray-200 dark:border-gray-800"
-              >
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.1200407575448!2d35.064999578546946!3d32.70943778142255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dafeaf153cbe9%3A0x4446258be5c6df91!2sP358%2BQ26%2C%20Isfiya!5e0!3m2!1sen!2sil!4v1767341761519!5m2!1sen!2sil" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-
-              <div class="grid grid-cols-1 gap-6">
-                <div
-                  class="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-2xl p-6"
-                >
-                  <h3
-                    class="text-xl font-extrabold text-gray-900 dark:text-white mb-4"
-                  >
-                    פרטי קשר
-                  </h3>
-                  <ul class="space-y-3 text-gray-700 dark:text-gray-300">
-                    <li class="flex items-start gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                        class="w-5 h-5 text-[#0a2143] dark:text-[#92a5af] mt-1"
-                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                     <path stroke-linecap="round" stroke-linejoin="round"
-                           d="M12 21s8-6.58 8-11a8 8 0 1 0-16 0c0 4.42 8 11 8 11z" />
-                     <circle cx="12" cy="10" r="3" />
-                   </svg>
-                        <circle cx="9" cy="20" r="1"></circle>
-                        <circle cx="17" cy="20" r="1"></circle>
-                      </svg>
-                      <span>עוספיא</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg
-                        class="w-5 h-5 shrink-0 mt-0.5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2 6.18 2 2 0 0 1 4 4h3a2 2 0 0 1 2 1.72c.1.96.36 1.9.77 2.77a2 2 0 0 1-.45 2.11L8.09 11a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.87.41 1.81.67 2.77.77A2 2 0 0 1 22 16.92z"
-                        />
-                      </svg>
-                      <a
-                        class="hover:text-primary transition-colors"
-                        href="tel:0501234567"
-                        >053-3832323</a
-                      >
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg
-                        class="w-5 h-5 shrink-0 mt-0.5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"
-                        ></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                      </svg>
-                      <a
-                        class="hover:text-primary transition-colors break-words"
-                        href="mailto:contact@shadesolutions.co.il"
-                      >
-                        office@rhino-group.co.il</a
-                      >
-                    </li>
-                  </ul>
-
-                  <div class="mt-5 flex gap-3">
-                    <a
-                      href="https://wa.me/972533832323"
-                      class="flex-1 px-5 py-3 rounded-lg bg-green-500 text-white font-bold text-center hover:bg-green-600 transition-colors"
-                    >
-                      וואטסאפ
-                    </a>
-                    <a
-                      href="tel:0501234567"
-                      class="flex-1 px-5 py-3 rounded-lg bg-accent text-white font-bold text-center hover:bg-primary hover:text-accent transition-colors"
-                    >
-                      התקשרו
-                    </a>
-                  </div>
-                </div>
-
-                <div
-                  class="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-2xl p-6"
-                >
-                  <h3
-                    class="text-xl font-extrabold text-gray-900 dark:text-white mb-4"
-                  >
-                    שעות פעילות
-                  </h3>
-                  <ul class="text-gray-700 dark:text-gray-300 space-y-1">
-                    <li>א׳–ה׳: 07:00–17:00</li>
-                    <li>ו׳-ש: סגור</li>
-                    
-                  </ul>
-                </div>
-              </div>
-            </aside>
+          <div class="footer__col">
+            <h3 class="footer__title">קישורים</h3>
+            <nav class="footer__links">
+              <a href="index.html">דף הבית</a>
+              <a href="services.html">שירותים</a>
+              <a href="projects.html" aria-current="page">פרויקטים</a>
+              <a href="about-us.html">אודות</a>
+              <a class="is-active" href="contact.html">צור קשר</a>
+            </nav>
           </div>
-        </div>
-      </main>
 
-      <!-- FOOTER (same as other pages) -->
-      <footer class="bg-primary text-white mt-auto">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="space-y-4">
-              <div class="flex items-center md:items-start gap-4">
-                <div
-                  class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                >
-                  <a href="./index.html"
-                    ><img src="./Assets/Logo - RHINO .png" alt="Logo"
-                  /></a>
-                </div>
-                <h2 class="text-xl font-bold">ריינו סוככים</h2>
-              </div>
-              <p class="text-gray-300">
-                פתרונות הצללה מתקדמים לבית ולעסק. פרגולות, סגירות חורף, סוככים
-                וגדרות אלומיניום בהתאמה אישית.
+          <div class="footer__col">
+            <h3 class="footer__title">שירותים</h3>
+            <nav class="footer__links">
+              <a href="index.html#services">פרגולות</a>
+              <a href="index.html#services">סגירות זכוכית</a>
+              <a href="index.html#services">מסכי ZIP</a>
+              <a href="index.html#services">גדרות ושערים</a>
+            </nav>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__title">ניוזלטר</h3>
+            <form class="footer__newsletter" aria-label="הרשמה לניוזלטר">
+              <p class="footer__newsletterText">
+                טיפים, השראה ועדכונים על פרויקטים חדשים
               </p>
-             <!-- Social Icons -->
-<div class="flex gap-4 pt-2">
-  <!-- Facebook -->
-  <a href="https://www.facebook.com/rhino.Awnings" target="_blank" aria-label="Facebook"
-     class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
-    <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="currentColor" aria-hidden="true">
-      <path d="M22 12a10 10 0 1 0-11.56 9.87v-6.98H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0 0 22 12z"/>
-    </svg>
-  </a>
-
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/rhino.awnings/" target="_blank" aria-label="Instagram"
-     class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
-    <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="currentColor" aria-hidden="true">
-      <path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2Zm5.3-7.93a1.12 1.12 0 1 0 0-2.24 1.12 1.12 0 0 0 0 2.24Z"/>
-      <path d="M17.8 2H6.2A4.2 4.2 0 0 0 2 6.2v11.6A4.2 4.2 0 0 0 6.2 22h11.6A4.2 4.2 0 0 0 22 17.8V6.2A4.2 4.2 0 0 0 17.8 2Zm2.5 15.8a2.5 2.5 0 0 1-2.5 2.5H6.2a2.5 2.5 0 0 1-2.5-2.5V6.2a2.5 2.5 0 0 1 2.5-2.5h11.6a2.5 2.5 0 0 1 2.5 2.5v11.6Z"/>
-    </svg>
-  </a>
-
-  <!-- WhatsApp -->
-  <a href="https://wa.me/972533832323" target="_blank" aria-label="WhatsApp"
-     class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
-    <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="currentColor" aria-hidden="true">
-      <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 3.48 8.52L2 24l3.6-1.44A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52ZM12 21.82c-1.94 0-3.74-.57-5.26-1.56l-.38-.24-2.14.86.82-2.08-.25-.4A9.81 9.81 0 0 1 2.18 12C2.18 6.56 6.56 2.18 12 2.18S21.82 6.56 21.82 12 17.44 21.82 12 21.82Zm5.02-6.46c-.28-.14-1.67-.83-1.93-.92-.26-.1-.45-.14-.64.14-.19.28-.74.92-.9 1.11-.17.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.37-.82-.72-1.37-1.6-1.53-1.88-.16-.28-.02-.44.12-.58.12-.12.28-.33.43-.5.14-.17.19-.28.29-.47.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.1-.23-.55-.46-.47-.64-.48l-.55-.01c-.19 0-.5.07-.76.36s-.99.97-.99 2.35 1.02 2.73 1.17 2.92c.14.19 2 3.05 4.84 4.27.68.29 1.2.46 1.61.59.68.22 1.3.19 1.79.11.55-.08 1.67-.68 1.9-1.33.23-.64.23-1.21.16-1.33-.07-.12-.26-.19-.54-.33Z"/>
-    </svg>
-  </a>
-</div>
-            </div>
-
-            <div>
-              <h3 class="text-lg font-bold">קישורים מהירים</h3>
-              <ul class="mt-4 space-y-2">
-                <li>
-                  <a
-                    class="text-gray-300 hover:text-white transition-colors"
-                    href="./about-us.html"
-                    >אודות</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="text-gray-300 hover:text-white transition-colors"
-                    href="./services.html"
-                    >שירותים</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="text-gray-300 hover:text-white transition-colors"
-                    href="./projects.html"
-                    >פרויקטים</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="text-gray-300 hover:text-white transition-colors"
-                    href="./contact.html"
-                    >צור קשר</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="text-lg font-bold">שירותים</h3>
-              <ul class="mt-4 space-y-2">
-                <li>
-                  <a
-                    class="text-gray-300 hover:text-white transition-colors"
-                    href="./pergolas.html"
-                    >פרגולות</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="text-gray-300 hover:text-white transition-colors"
-                    href="./fences.html"
-                    >גדרות אלומיניום</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="text-gray-300 hover:text-white transition-colors"
-                    href="./enclosures.html"
-                    >סגירות חורף</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="text-lg font-bold">יצירת קשר</h3>
-              <ul class="mt-4 space-y-2 text-gray-300">
-                <li class="flex items-center gap-2">
-                  <svg
-                    class="feather feather-map-pin"
-                    fill="none"
-                    height="20"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="20"
-                  >
-                    <path
-                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
-                    ></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
-                  <span>עוספיא</span>
-                </li>
-                <li class="flex items-center gap-2">
-                  <svg
-                    class="feather feather-phone"
-                    fill="none"
-                    height="20"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="20"
-                  >
-                    <path
-                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                    ></path>
-                  </svg>
-                  <span>053-3832323</span>
-                </li>
-                <li class="flex items-center gap-2">
-                  <svg
-                    class="feather feather-mail"
-                    fill="none"
-                    height="20"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="20"
-                  >
-                    <path
-                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                    ></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
-                  <span class="break-words">office@rhino-group.co.il</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Bottom row -->
-          <div
-            class="mt-16 pt-8 border-t border-white/20 text-center md:text-right text-gray-400 text-sm"
-          >
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start sm:items-center"
-            >
-              <!-- Newsletter -->
-              <div
-                class="order-1 sm:order-1 md:order-2 lg:order-1 text-center sm:text-right"
-              >
-                <h3 class="text-lg font-bold text-white mb-1">
-                  הישארו מעודכנים
-                </h3>
-                <p class="text-gray-300 text-sm mb-3">
-                  קבלו עדכונים, מבצעים ופרויקטים חדשים ישירות למייל.
-                </p>
-                <form
-                  class="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3"
-                >
-                  <input
-                    type="email"
-                    placeholder="כתובת האימייל שלך"
-                    class="w-full sm:w-56 px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent"
-                    required
-                  />
-                  <button
-                    type="submit"
-                    class="px-5 py-2 bg-background-light text-primary font-bold rounded-lg hover:bg-background-dark hover:text-white transition-all"
-                  >
-                    הירשם
-                  </button>
-                </form>
+              <div class="footer__newsletterForm">
+                <input
+                  class="footer__input"
+                  type="email"
+                  placeholder="האימייל שלכם"
+                  required
+                />
+                <button class="footer__submit" type="submit">הצטרפות</button>
               </div>
-
-              <!-- Privacy / Terms -->
-              <div
-                class="order-2 sm:order-2 md:order-1 lg:order-2 flex justify-center sm:justify-start lg:justify-center gap-6 text-gray-300"
-              >
-                <a href="./privacy.html" class="hover:text-white transition-colors"
-                  >מדיניות פרטיות</a
-                >
-                <a href="./terms.html" class="hover:text-white transition-colors"
-                  >תנאי שימוש</a
-                >
-                <a href="#" id="openCookiePrefs" class="underline hover:opacity-80">ניהול עוגיות</a>
-              </div>
-
-              <!-- Copyright -->
-              <div
-                class="order-3 sm:order-3 md:order-3 lg:order-3 md:col-span-2 lg:col-span-1 text-center sm:text-center text-gray-400 mt-4 sm:mt-6 lg:mt-0"
-              >
-                <p>© 2025 ריינו סוככים. כל הזכויות שמורות.</p>
-                <p class="credit">Marketing & Growth - <a href="https://wa.me/972336363556">236 Marketing</a></p>
-                <p class="credit">Designed & Developed by - <a href="https://flammin.studio">Flammin.Studio</a></p>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
-      </footer>
-      <!-- Cookies Banner -->
-<div id="cookieBanner" dir="rtl"
-class="fixed inset-x-0 bottom-0 z-[60] bg-white/95 dark:bg-[#0b1420]/95 backdrop-blur border-t border-gray-200/60 dark:border-white/10 shadow-lg">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
- <p class="text-sm text-gray-700 dark:text-gray-200 leading-6">
-   אנו משתמשים בעוגיות (Cookies) לשיפור חוויית הגלישה, ניתוח תנועה ותצוגת תוכן מותאם.
-   ניתן לנהל העדפות בכל עת.
-   <a href="./privacy.html" class="underline font-semibold hover:opacity-80">קראו עוד במדיניות הפרטיות</a>.
- </p>
- <div class="flex items-center gap-2">
-  <button id="cookieCustomize"
-  class="px-3 py-1.5 text-xs md:text-sm rounded-md border border-gray-300 dark:border-white/20 text-gray-800 dark:text-white hover:bg-gray-50 dark:hover:bg-white/10">
-  נהל העדפות
-</button>
-<button id="cookieRejectAll"
-  class="px-3 py-1.5 text-xs md:text-sm rounded-md bg-gray-200 text-gray-900 hover:bg-gray-300 font-semibold">
-  דחה הכל
-</button>
-<button id="cookieAcceptAll"
-  class="px-3 py-1.5 text-xs md:text-sm rounded-md bg-[#0a2143] text-white hover:bg-[#0b2a57] font-semibold">
-  אשר הכל
-</button>
- </div>
-</div>
-</div>
-</div>
 
-<!-- Preferences Modal -->
-<div id="cookiePrefsModal" class="hidden fixed inset-0 z-[70]">
-<div class="absolute inset-0 bg-black/50"></div>
-<div class="relative mx-auto my-10 w-full max-w-2xl bg-white dark:bg-[#0b1420] rounded-2xl shadow-2xl border border-gray-200/60 dark:border-white/10">
-<div class="px-6 py-5 border-b border-gray-200/60 dark:border-white/10 flex items-center justify-between">
- <h3 class="text-xl font-extrabold text-[#0a2143] dark:text-white">העדפות עוגיות</h3>
- <button id="cookiePrefsClose" class="p-2 rounded hover:bg-gray-100 dark:hover:bg-white/10" aria-label="סגור">✕</button>
-</div>
-<div class="px-6 py-5 space-y-5 text-sm">
- <!-- Essential (always on) -->
- <div class="flex items-start gap-3">
-   <input type="checkbox" checked disabled class="mt-1">
-   <div>
-     <p class="font-bold">חיוניות (תמיד פעיל)</p>
-     <p class="text-gray-600 dark:text-gray-300">נדרשות לתפקוד בסיסי של האתר (אבטחה, שפה, סשן).</p>
-   </div>
- </div>
+        <div class="footer__bottom">
+          <div class="footer__legal">
+            <a href="privacy-policy">מדיניות פרטיות</a>
+            <a href="terms-of-use">תנאי שימוש</a>
+          </div>
 
- <!-- Analytics -->
- <div class="flex items-start gap-3">
-   <input id="ck-analytics" type="checkbox" class="mt-1">
-   <div>
-     <p class="font-bold">אנליטיקה</p>
-     <p class="text-gray-600 dark:text-gray-300">מדידת שימוש ושיפור חוויית משתמש (כגון Google Analytics במצב אנונימי).</p>
-   </div>
- </div>
+          <div class="footer__copy">
+            <span class="credit"
+              >Marketing & Growth
+              <a class="linking" href="http://">236 Marketing</a></span
+            >
+            <br />
+            <span class="credit"
+              >Designed & Developed
+              <a class="linking" href="http://flammin.studio/"
+                >Flammin.Studio</a
+              ></span
+            >
+            <br />
+            <span class="credit"
+              >© <span id="yearNow"></span> Rhino Awnings</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
 
- <!-- Marketing -->
- <div class="flex items-start gap-3">
-   <input id="ck-marketing" type="checkbox" class="mt-1">
-   <div>
-     <p class="font-bold">שיווק</p>
-     <p class="text-gray-600 dark:text-gray-300">פיקסלים ורימרקטינג (למשל Meta Pixel/Google Ads).</p>
-   </div>
- </div>
-
- <!-- Functional -->
- <div class="flex items-start gap-3">
-   <input id="ck-functional" type="checkbox" class="mt-1">
-   <div>
-     <p class="font-bold">פונקציונלי</p>
-     <p class="text-gray-600 dark:text-gray-300">תכונות נוספות כמו מפות, סרטוני וידאו מוטמעים, צ'אט.</p>
-   </div>
- </div>
-</div>
-<div class="px-6 py-5 border-t border-gray-200/60 dark:border-white/10 flex items-center justify-between">
- <button id="cookiePrefsReject" class="px-4 py-2 rounded-lg bg-gray-200 text-gray-900 hover:bg-gray-300 font-bold">דחה הכל</button>
- <div class="flex gap-2">
-   <button id="cookiePrefsSave" class="px-4 py-2 rounded-lg bg-[#0a2143] text-white hover:bg-[#0b2a57] font-bold">שמור העדפות</button>
- </div>
-</div>
-</div>
-</div>
-    
-
-    <!-- Scripts -->
-    <script>
-      // Mobile menu toggle (same behavior site-wide)
-      document.addEventListener("DOMContentLoaded", () => {
-        const btn = document.getElementById("mobileBtn");
-        const panel = document.getElementById("mobilePanel");
-        const icOpen = document.getElementById("mobileIconOpen");
-        const icClose = document.getElementById("mobileIconClose");
-        if (btn && panel) {
-          const setOpen = (open) => {
-            panel.classList.toggle("hidden", !open);
-            btn.setAttribute("aria-expanded", String(open));
-            icOpen?.classList.toggle("hidden", open);
-            icClose?.classList.toggle("hidden", !open);
-            document.documentElement.classList.toggle("overflow-hidden", open);
-          };
-          setOpen(false);
-          btn.addEventListener("click", () =>
-            setOpen(panel.classList.contains("hidden"))
-          );
-          document.addEventListener(
-            "keydown",
-            (e) => e.key === "Escape" && setOpen(false)
-          );
-          document.addEventListener("click", (e) => {
-            if (!panel.classList.contains("hidden")) {
-              const within = panel.contains(e.target) || btn.contains(e.target);
-              if (!within) setOpen(false);
-            }
-          });
-        }
-
-        // Simple fake form handler (no backend) -> shows toast
-        const form = document.getElementById("contactForm");
-        const toast = document.getElementById("formToast");
-        if (form && toast) {
-          form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            toast.classList.remove("hidden");
-            form.reset();
-            setTimeout(() => toast.classList.add("hidden"), 4000);
-          });
-        }
-      });
-    </script>
-
-    
-
-<script>
-  (function() {
-    const LS_KEY = 'cookieConsent.v1';
-    const $ = (id) => document.getElementById(id);
-
-    const banner = $('cookieBanner');
-    const modal  = $('cookiePrefsModal');
-    const btnOpenPrefs   = $('cookieCustomize');
-    const btnManageLink  = $('openCookiePrefs');
-    const btnAcceptAll   = $('cookieAcceptAll');
-    const btnRejectAll   = $('cookieRejectAll');
-    const btnCloseModal  = $('cookiePrefsClose');
-    const btnPrefsReject = $('cookiePrefsReject');
-    const btnPrefsSave   = $('cookiePrefsSave');
-
-    const ckAnalytics  = $('ck-analytics');
-    const ckMarketing  = $('ck-marketing');
-    const ckFunctional = $('ck-functional');
-
-    const defaultConsent = {
-      essential: true,
-      analytics: false,
-      marketing: false,
-      functional: false,
-      ts: null
-    };
-
-    const readConsent = () => {
-      try { return JSON.parse(localStorage.getItem(LS_KEY)) || null; }
-      catch { return null; }
-    };
-
-    const writeConsent = (obj) => {
-      const payload = { ...obj, ts: new Date().toISOString() };
-      localStorage.setItem(LS_KEY, JSON.stringify(payload));
-      return payload;
-    };
-
-    const openModal = () => { modal.classList.remove('hidden'); document.documentElement.classList.add('overflow-hidden'); };
-    const closeModal = () => { modal.classList.add('hidden'); document.documentElement.classList.remove('overflow-hidden'); };
-
-    // Apply consent: load/disable tools accordingly
-    function applyConsent(c) {
-      // Google Consent Mode v2 (if you use GA/Ads)
-      if (window.gtag) {
-        window.gtag('consent', 'update', {
-          'analytics_storage': c.analytics ? 'granted' : 'denied',
-          'ad_storage':       c.marketing ? 'granted' : 'denied',
-          'ad_user_data':     c.marketing ? 'granted' : 'denied',
-          'ad_personalization': c.marketing ? 'granted' : 'denied',
-          'functionality_storage': c.functional ? 'granted' : 'denied',
-          'security_storage': 'granted'
-        });
-      }
-
-      // Load deferred scripts tagged by category
-      document.querySelectorAll('script[type="text/plain"][data-cookie-category]').forEach(tag => {
-        const cat = tag.getAttribute('data-cookie-category');
-        if (cat && c[cat]) {
-          const s = document.createElement('script');
-          // copy attributes
-          for (const {name, value} of tag.attributes) {
-            if (name === 'type' || name === 'data-cookie-category') continue;
-            s.setAttribute(name, value);
-          }
-          s.text = tag.text || '';
-          s.async = true;
-          tag.parentNode.insertBefore(s, tag);
-          tag.remove();
-        }
-      });
-
-      // Example: toggle iframes (e.g., maps/videos) by data-cookie-category
-      document.querySelectorAll('[data-cookie-category][data-src]').forEach(el => {
-        const cat = el.getAttribute('data-cookie-category');
-        if (cat && c[cat] && !el.getAttribute('src')) {
-          el.setAttribute('src', el.getAttribute('data-src'));
-        }
-      });
-    }
-
-    // Initialize
-    const existing = readConsent();
-    if (existing) {
-      banner.classList.add('hidden');   // already decided
-      ckAnalytics.checked  = !!existing.analytics;
-      ckMarketing.checked  = !!existing.marketing;
-      ckFunctional.checked = !!existing.functional;
-      applyConsent(existing);
-    } else {
-      banner.classList.remove('hidden'); // show banner
-    }
-
-    // Handlers
-    btnAcceptAll?.addEventListener('click', () => {
-      const c = writeConsent({ ...defaultConsent, analytics: true, marketing: true, functional: true });
-      banner.classList.add('hidden');
-      applyConsent(c);
-    });
-
-    const rejectAll = () => {
-      const c = writeConsent({ ...defaultConsent, analytics: false, marketing: false, functional: false });
-      banner.classList.add('hidden');
-      closeModal();
-      applyConsent(c);
-    };
-
-    btnRejectAll?.addEventListener('click', rejectAll);
-    btnPrefsReject?.addEventListener('click', rejectAll);
-
-    btnOpenPrefs?.addEventListener('click', openModal);
-    btnManageLink?.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
-
-    btnCloseModal?.addEventListener('click', closeModal);
-
-    btnPrefsSave?.addEventListener('click', () => {
-      const c = writeConsent({
-        ...defaultConsent,
-        analytics:  ckAnalytics.checked,
-        marketing:  ckMarketing.checked,
-        functional: ckFunctional.checked
-      });
-      banner.classList.add('hidden');
-      closeModal();
-      applyConsent(c);
-    });
-
-    // Close modal on overlay click
-    modal?.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-  })();
-</script>
+    <script src="js/main.js"></script>
   </body>
 </html>

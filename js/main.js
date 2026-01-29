@@ -767,3 +767,269 @@ if (y) y.textContent = new Date().getFullYear();
     });
   });
 })();
+
+// js/contact.js
+(() => {
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("contactStatus");
+  const mailBtn = document.getElementById("contactMailBtn");
+
+  if (!form) return;
+
+  const phoneTarget = "972533832323";
+
+  const setStatus = (msg, type) => {
+    if (!status) return;
+    status.textContent = msg || "";
+    status.classList.remove("is-error", "is-ok");
+    if (type) status.classList.add(type);
+  };
+
+  const normalizePhone = (raw) => {
+    const v = String(raw || "").trim();
+    return v.replace(/[^\d+]/g, "");
+  };
+
+  const isValidEmail = (email) => {
+    const v = String(email || "").trim();
+    if (!v) return true;
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+  };
+
+  const buildMessage = (data) => {
+    const name = (data.get("name") || "").toString().trim();
+    const phone = normalizePhone(data.get("phone"));
+    const email = (data.get("email") || "").toString().trim();
+    const location = (data.get("location") || "").toString().trim();
+    const service = (data.get("service") || "").toString().trim();
+    const message = (data.get("message") || "").toString().trim();
+
+    const lines = [
+      "שלום ריינו סוככים,",
+      "אשמח לקבל הצעת מחיר.",
+      "",
+      `שם, ${name}`,
+      `טלפון, ${phone}`,
+      `אזור, ${location}`,
+      `שירות, ${service}`,
+    ];
+
+    if (email) lines.splice(5, 0, `אימייל, ${email}`);
+    if (message) lines.push(`הודעה, ${message}`);
+
+    return lines.join("\n");
+  };
+
+  const validate = (data) => {
+    const name = (data.get("name") || "").toString().trim();
+    const phone = normalizePhone(data.get("phone"));
+    const email = (data.get("email") || "").toString().trim();
+    const location = (data.get("location") || "").toString().trim();
+    const service = (data.get("service") || "").toString().trim();
+
+    if (name.length < 2) return "נא להזין שם מלא";
+    if (phone.length < 9) return "נא להזין מספר טלפון תקין";
+    if (email && !isValidEmail(email)) return "נא להזין אימייל תקין";
+    if (!location) return "נא לבחור אזור בארץ";
+    if (!service) return "נא לבחור שירות";
+    return "";
+  };
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const err = validate(data);
+
+    if (err) {
+      setStatus(err, "is-error");
+      return;
+    }
+
+    setStatus("מעביר ל WhatsApp, רגע אחד", "is-ok");
+
+    const text = buildMessage(data);
+    const url = `https://wa.me/${phoneTarget}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank", "noopener");
+  });
+
+  mailBtn?.addEventListener("click", () => {
+    const data = new FormData(form);
+    const err = validate(data);
+
+    if (err) {
+      setStatus(err, "is-error");
+      return;
+    }
+
+    const subject = "פנייה מאתר ריינו סוככים";
+    const body = buildMessage(data);
+
+    const mailto = `mailto:office@rhino-group.co.il?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailto;
+  });
+})();
+
+// Prgola service scripts
+
+(function () {
+  const LS_KEY = "cookieConsent.v1";
+  const $ = (id) => document.getElementById(id);
+
+  const banner = $("cookieBanner");
+  const modal = $("cookiePrefsModal");
+  const btnOpenPrefs = $("cookieCustomize");
+  const btnManageLink = $("openCookiePrefs");
+  const btnAcceptAll = $("cookieAcceptAll");
+  const btnRejectAll = $("cookieRejectAll");
+  const btnCloseModal = $("cookiePrefsClose");
+  const btnPrefsReject = $("cookiePrefsReject");
+  const btnPrefsSave = $("cookiePrefsSave");
+
+  const ckAnalytics = $("ck-analytics");
+  const ckMarketing = $("ck-marketing");
+  const ckFunctional = $("ck-functional");
+
+  const defaultConsent = {
+    essential: true,
+    analytics: false,
+    marketing: false,
+    functional: false,
+    ts: null,
+  };
+
+  const readConsent = () => {
+    try {
+      return JSON.parse(localStorage.getItem(LS_KEY)) || null;
+    } catch {
+      return null;
+    }
+  };
+
+  const writeConsent = (obj) => {
+    const payload = { ...obj, ts: new Date().toISOString() };
+    localStorage.setItem(LS_KEY, JSON.stringify(payload));
+    return payload;
+  };
+
+  const openModal = () => {
+    modal.classList.remove("hidden");
+    document.documentElement.classList.add("overflow-hidden");
+  };
+  const closeModal = () => {
+    modal.classList.add("hidden");
+    document.documentElement.classList.remove("overflow-hidden");
+  };
+
+  // Apply consent: load/disable tools accordingly
+  function applyConsent(c) {
+    // Google Consent Mode v2 (if you use GA/Ads)
+    if (window.gtag) {
+      window.gtag("consent", "update", {
+        analytics_storage: c.analytics ? "granted" : "denied",
+        ad_storage: c.marketing ? "granted" : "denied",
+        ad_user_data: c.marketing ? "granted" : "denied",
+        ad_personalization: c.marketing ? "granted" : "denied",
+        functionality_storage: c.functional ? "granted" : "denied",
+        security_storage: "granted",
+      });
+    }
+
+    // Load deferred scripts tagged by category
+    document
+      .querySelectorAll('script[type="text/plain"][data-cookie-category]')
+      .forEach((tag) => {
+        const cat = tag.getAttribute("data-cookie-category");
+        if (cat && c[cat]) {
+          const s = document.createElement("script");
+          // copy attributes
+          for (const { name, value } of tag.attributes) {
+            if (name === "type" || name === "data-cookie-category") continue;
+            s.setAttribute(name, value);
+          }
+          s.text = tag.text || "";
+          s.async = true;
+          tag.parentNode.insertBefore(s, tag);
+          tag.remove();
+        }
+      });
+
+    // Example: toggle iframes (e.g., maps/videos) by data-cookie-category
+    document
+      .querySelectorAll("[data-cookie-category][data-src]")
+      .forEach((el) => {
+        const cat = el.getAttribute("data-cookie-category");
+        if (cat && c[cat] && !el.getAttribute("src")) {
+          el.setAttribute("src", el.getAttribute("data-src"));
+        }
+      });
+  }
+
+  // Initialize
+  const existing = readConsent();
+  if (existing) {
+    banner.classList.add("hidden"); // already decided
+    ckAnalytics.checked = !!existing.analytics;
+    ckMarketing.checked = !!existing.marketing;
+    ckFunctional.checked = !!existing.functional;
+    applyConsent(existing);
+  } else {
+    banner.classList.remove("hidden"); // show banner
+  }
+
+  // Handlers
+  btnAcceptAll?.addEventListener("click", () => {
+    const c = writeConsent({
+      ...defaultConsent,
+      analytics: true,
+      marketing: true,
+      functional: true,
+    });
+    banner.classList.add("hidden");
+    applyConsent(c);
+  });
+
+  const rejectAll = () => {
+    const c = writeConsent({
+      ...defaultConsent,
+      analytics: false,
+      marketing: false,
+      functional: false,
+    });
+    banner.classList.add("hidden");
+    closeModal();
+    applyConsent(c);
+  };
+
+  btnRejectAll?.addEventListener("click", rejectAll);
+  btnPrefsReject?.addEventListener("click", rejectAll);
+
+  btnOpenPrefs?.addEventListener("click", openModal);
+  btnManageLink?.addEventListener("click", (e) => {
+    e.preventDefault();
+    openModal();
+  });
+
+  btnCloseModal?.addEventListener("click", closeModal);
+
+  btnPrefsSave?.addEventListener("click", () => {
+    const c = writeConsent({
+      ...defaultConsent,
+      analytics: ckAnalytics.checked,
+      marketing: ckMarketing.checked,
+      functional: ckFunctional.checked,
+    });
+    banner.classList.add("hidden");
+    closeModal();
+    applyConsent(c);
+  });
+
+  // Close modal on overlay click
+  modal?.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+})();
