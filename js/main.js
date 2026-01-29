@@ -512,3 +512,258 @@ document.getElementById("yearNow").textContent = new Date().getFullYear();
   window.addEventListener("scroll", toggle, { passive: true });
   window.addEventListener("resize", toggle);
 })();
+
+/* About us Page Scripts */
+
+const y = document.getElementById("yearNow");
+if (y) y.textContent = new Date().getFullYear();
+(() => {
+  const els = document.querySelectorAll("[data-bg]");
+  if (!els.length) return;
+
+  const apply = (el) => {
+    const url = el.getAttribute("data-bg");
+    if (!url) return;
+    el.style.backgroundImage = `url("${url}")`;
+    el.removeAttribute("data-bg");
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    els.forEach(apply);
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        apply(e.target);
+        io.unobserve(e.target);
+      });
+    },
+    { rootMargin: "250px 0px" }
+  );
+
+  els.forEach((el) => io.observe(el));
+})();
+
+/*  PROJECT PAGE SCRIPTS */
+
+// Create js/projects-page.js
+
+(() => {
+  const yearNow = document.getElementById("yearNow");
+  if (yearNow) yearNow.textContent = new Date().getFullYear();
+
+  // Filter dropdown
+  const filterBtn = document.getElementById("typeFilterBtn");
+  const filterMenu = document.getElementById("typeFilterMenu");
+  const filterLabel = document.getElementById("typeFilterLabel");
+  const tiles = Array.from(
+    document.querySelectorAll(".project-tile[data-type]")
+  );
+
+  const openMenu = () => {
+    if (!filterMenu) return;
+    filterMenu.hidden = false;
+    filterBtn?.setAttribute("aria-expanded", "true");
+  };
+
+  const closeMenu = () => {
+    if (!filterMenu) return;
+    filterMenu.hidden = true;
+    filterBtn?.setAttribute("aria-expanded", "false");
+  };
+
+  if (filterBtn && filterMenu) {
+    filterBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      filterMenu.hidden ? openMenu() : closeMenu();
+    });
+
+    filterMenu.addEventListener("click", (e) => {
+      const option = e.target.closest("[data-type-filter]");
+      if (!option) return;
+
+      const value = option.getAttribute("data-type-filter") || "*";
+      const text = option.textContent?.trim() || "הכל";
+
+      if (filterLabel)
+        filterLabel.textContent = value === "*" ? "כל הפרויקטים" : text;
+
+      tiles.forEach((el) => {
+        const t = el.getAttribute("data-type") || "";
+        const show = value === "*" || t === value;
+        el.style.display = show ? "" : "none";
+      });
+
+      closeMenu();
+    });
+
+    document.addEventListener("click", (e) => {
+      if (filterMenu.hidden) return;
+      const inside =
+        filterMenu.contains(e.target) || filterBtn.contains(e.target);
+      if (!inside) closeMenu();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+  }
+
+  // Gallery modal
+  const modal = document.getElementById("galleryModal");
+  const imgEl = document.getElementById("galleryImage");
+  const captionEl = document.getElementById("galleryCaption");
+  const dotsEl = document.getElementById("galleryDots");
+  const btnPrev = document.getElementById("galleryPrev");
+  const btnNext = document.getElementById("galleryNext");
+  const btnClose = document.getElementById("galleryClose");
+
+  if (!modal || !imgEl || !captionEl || !dotsEl || !btnClose) return;
+
+  let gallery = [];
+  let idx = 0;
+  let title = "";
+  let sub = "";
+
+  const setModal = (open) => {
+    modal.hidden = !open;
+    modal.setAttribute("aria-hidden", String(!open));
+    document.body.style.overflow = open ? "hidden" : "";
+    if (open) btnClose.focus();
+  };
+
+  const parseGallery = (raw) =>
+    (raw || "")
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
+
+  const renderDots = () => {
+    dotsEl.innerHTML = "";
+    gallery.forEach((_, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", `תמונה ${i + 1}`);
+      b.addEventListener("click", () => {
+        idx = i;
+        updateSlide();
+      });
+      dotsEl.appendChild(b);
+    });
+  };
+
+  const highlightDot = () => {
+    Array.from(dotsEl.children).forEach((d, i) => {
+      d.setAttribute("aria-current", i === idx ? "true" : "false");
+    });
+  };
+
+  const updateSlide = () => {
+    if (!gallery.length) return;
+    imgEl.src = gallery[idx];
+    const left = `${idx + 1}/${gallery.length}`;
+    captionEl.textContent = title
+      ? `${title}${sub ? " , " + sub : ""} , ${left}`
+      : left;
+    highlightDot();
+    if (btnPrev) btnPrev.disabled = gallery.length <= 1;
+    if (btnNext) btnNext.disabled = gallery.length <= 1;
+  };
+
+  const next = () => {
+    if (!gallery.length) return;
+    idx = (idx + 1) % gallery.length;
+    updateSlide();
+  };
+
+  const prev = () => {
+    if (!gallery.length) return;
+    idx = (idx - 1 + gallery.length) % gallery.length;
+    updateSlide();
+  };
+
+  const openFromTile = (tile) => {
+    gallery = parseGallery(tile.getAttribute("data-gallery"));
+    title = tile.getAttribute("data-title") || "";
+    sub = tile.getAttribute("data-sub") || "";
+    if (!gallery.length) return;
+
+    idx = 0;
+    renderDots();
+    updateSlide();
+    setModal(true);
+  };
+
+  tiles.forEach((tile) => {
+    tile.addEventListener("click", () => openFromTile(tile));
+  });
+
+  btnClose.addEventListener("click", () => setModal(false));
+  btnNext?.addEventListener("click", next);
+  btnPrev?.addEventListener("click", prev);
+
+  document.addEventListener("keydown", (e) => {
+    if (modal.hidden) return;
+    if (e.key === "Escape") setModal(false);
+    if (e.key === "ArrowRight") next();
+    if (e.key === "ArrowLeft") prev();
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) setModal(false);
+  });
+
+  // touch swipe on image
+  let startX = null;
+  imgEl.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+  imgEl.addEventListener("touchend", (e) => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) (dx < 0 ? next : prev)();
+    startX = null;
+  });
+})();
+
+/* SERBIVES PAGE SCRIPTS */
+
+(() => {
+  const chips = Array.from(
+    document.querySelectorAll(".filter-chip[data-filter]")
+  );
+  const cards = Array.from(
+    document.querySelectorAll(".service-card[data-category]")
+  );
+
+  if (!chips.length || !cards.length) return;
+
+  const setActive = (btn) => {
+    chips.forEach((b) => {
+      b.classList.toggle("is-active", b === btn);
+      b.setAttribute("aria-selected", b === btn ? "true" : "false");
+    });
+  };
+
+  const apply = (filter) => {
+    cards.forEach((card) => {
+      const cat = (card.getAttribute("data-category") || "").trim();
+      const show = filter === "הכל" || cat === filter;
+      card.style.display = show ? "" : "none";
+    });
+  };
+
+  const defaultBtn = chips.find((b) => b.dataset.filter === "הכל") || chips[0];
+  setActive(defaultBtn);
+  apply(defaultBtn.dataset.filter);
+
+  chips.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setActive(btn);
+      apply(btn.dataset.filter);
+    });
+  });
+})();

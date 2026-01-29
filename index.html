@@ -10,7 +10,7 @@
     />
     <link
       rel="shortcut icon"
-      href="/Assets/white-logo.png"
+      href="Assets/white-logo.png"
       type="image/x-icon"
     />
     <title>ריינו סוככים, פתרונות הצללה וגידור בהתאמה אישית</title>
@@ -22,6 +22,14 @@
       name="robots"
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
+
+    <!-- GEO AI context -->
+    <meta
+      name="keywords"
+      content="סוככים, פרגולות, מסכי ZIP, גדרות אלומיניום, פתרונות הצללה, ריינו סוככים"
+    />
+    <!-- author and business identity -->
+    <meta name="author" content="Rhino Awnings" />
 
     <link rel="canonical" href="https://rhino-awnings.com/" />
 
@@ -69,7 +77,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
     <script type="application/ld+json">
       {
@@ -114,8 +122,8 @@
       <div class="header-desktop">
         <div class="topbar">
           <nav class="top-links" aria-label="תפריט עליון">
-            <a href="./index.html">דף הבית</a>
-            <a href="#about">אודות</a>
+            <a class="is-active" href="index.html">דף הבית</a>
+            <a href="about-us.html">אודות</a>
             <a href="#projects">פרויקטים</a>
             <a href="#contact">צרו קשר</a>
           </nav>
@@ -150,7 +158,7 @@
             >
               <span class="mega__icon" aria-hidden="true">
                 <img
-                  src="/Assets/Icons/Pergola.png"
+                  src="Assets/Icons/Pergola.png"
                   alt=""
                   width="100"
                   height="100"
@@ -208,11 +216,11 @@
               <span class="mega__text">גדרות ושערים</span>
             </button>
 
-            <a class="mega__link" href="#services">כל השירותים</a>
+            <a class="mega__link" href="services.html">כל השירותים</a>
           </nav>
 
           <div class="actions">
-            <a class="btn btn--ghost" href="#projects">עבודות נבחרות</a>
+            <a class="btn btn--ghost" href="projects.html">עבודות נבחרות</a>
             <a class="btn btn--primary" href="#contact">קבלת הצעת מחיר</a>
           </div>
         </div>
@@ -262,7 +270,7 @@
       <div class="header-mobile">
         <a class="brand" href="/" aria-label="דף הבית">
           <img
-            src="/Assets/white-logo.png"
+            src="Assets/white-logo.png"
             alt="ריינו סוככים"
             width="80"
             height="40"
@@ -272,7 +280,7 @@
         <div class="m-actions">
           <a class="m-phone" href="tel:+972533832323" aria-label="התקשרו אלינו">
             <img
-              src="/Assets/Icons/Whatsapp.png"
+              src="Assets/Icons/Whatsapp.png"
               alt=""
               width="22"
               height="22"
@@ -332,21 +340,6 @@
                 class="acc__head"
                 type="button"
                 aria-expanded="false"
-                data-acc="awnings"
-              >
-                <span>סוככים</span
-                ><span class="acc__chev" aria-hidden="true">⌄</span>
-              </button>
-              <div class="acc__body" hidden>
-                <a href="#services">סוככי זרועות</a>
-                <a href="#services">סוככים קבועים</a>
-                <a href="#services">מרקיזה</a>
-              </div>
-
-              <button
-                class="acc__head"
-                type="button"
-                aria-expanded="false"
                 data-acc="closures"
               >
                 <span>סגירות</span
@@ -389,8 +382,10 @@
             </div>
 
             <div class="drawer__links">
-              <a href="#about">אודות</a>
-              <a href="#projects">פרויקטים</a>
+              <a class="is-active" href="index.html">דף הבית</a>
+              <a href="about-us.html">אודות</a>
+              <a href="services.html">השירותים שלנו</a>
+              <a href="projects.html">פרויקטים</a>
               <a href="#contact">צור קשר</a>
             </div>
 
@@ -410,12 +405,15 @@
         <div class="hero__bg" aria-hidden="true"></div>
 
         <div class="container hero__content">
-          <h1>פתרונות הצללה וגידור בהתאמה אישית</h1>
+          <h1>
+            פתרונות הצללה וגידור <br />
+            בהתאמה אישית
+          </h1>
           <p>מקצועיות, איכות, אמינות, עיצוב מוקפד, ייצור והתקנה בכל הארץ</p>
 
           <div class="hero__cta">
             <a class="btn btn--primary" href="#contact">קבלת הצעת מחיר</a>
-            <a class="btn btn--ghost" href="#services">לשירותים שלנו</a>
+            <a class="btn btn--ghost" href="services.html">לשירותים שלנו</a>
           </div>
         </div>
       </section>
@@ -454,7 +452,7 @@
               </p>
             </div>
 
-            <a class="btn btn--primary services__all" href="#services"
+            <a class="btn btn--primary services__all" href="services.html"
               >לכל השירותים</a
             >
           </header>
@@ -544,7 +542,7 @@
               </p>
             </div>
 
-            <a class="btn btn--primary projects__all" href="/projects"
+            <a class="btn btn--primary projects__all" href="projects.html"
               >לכל הפרויקטים</a
             >
           </header>
@@ -642,7 +640,7 @@
               </p>
             </div>
 
-            <a class="btn btn--ghost about-home__btn" href="/about"
+            <a class="btn btn--ghost about-home__btn" href="about-us.html"
               >קרא עוד אודותינו</a
             >
           </header>
@@ -908,7 +906,7 @@
             <div class="footer__col footer__brand">
               <a class="footer__logo" href="/" aria-label="דף הבית">
                 <img
-                  src="/Assets/white-logo.png"
+                  src="Assets/white-logo.png"
                   alt="ריינו סוככים"
                   width="140"
                   height="44"
@@ -925,10 +923,10 @@
             <div class="footer__col">
               <h3 class="footer__title">קישורים</h3>
               <nav class="footer__links">
-                <a href="./index.html">דף הבית</a>
-                <a href="#services">שירותים</a>
-                <a href="#projects">פרויקטים</a>
-                <a href="#about">אודות</a>
+                <a class="is-active" href="index.html">דף הבית</a>
+                <a href="services.html">שירותים</a>
+                <a href="projects.html">פרויקטים</a>
+                <a href="about-us.html">אודות</a>
                 <a href="#contact">צור קשר</a>
               </nav>
             </div>
@@ -968,8 +966,8 @@
 
           <div class="footer__bottom">
             <div class="footer__legal">
-              <a href="/privacy-policy">מדיניות פרטיות</a>
-              <a href="/terms-of-use">תנאי שימוש</a>
+              <a href="privacy-policy">מדיניות פרטיות</a>
+              <a href="terms-of-use">תנאי שימוש</a>
             </div>
 
             <div class="footer__copy">
@@ -980,7 +978,9 @@
               <br />
               <span class="credit"
                 >Designed & Developed -
-                <a class="linking" href="http://">Flammin.Studio</a></span
+                <a class="linking" href="http://flammin.studio/"
+                  >Flammin.Studio</a
+                ></span
               >
               <br />
               <span class="credit">
@@ -992,7 +992,7 @@
       </footer>
     </main>
 
-    <script src="/js/main.js" defer></script>
+    <script src="js/main.js" defer></script>
     <a
       class="sticky-wa"
       href="https://wa.me/972533832323?text=%D7%94%D7%99%D7%99%20%D7%A8%D7%99%D7%99%D7%A0%D7%95%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%95%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8"
@@ -1002,7 +1002,7 @@
       data-sticky-wa
     >
       <span class="sticky-wa__icon">
-        <img src="/Assets/Icons/Whatsapp.png" alt="" />
+        <img src="Assets/Icons/Whatsapp.png" alt="" />
       </span>
 
       <span class="sticky-wa__tooltip">התחילו ייעוץ בוואטסאפ</span>
